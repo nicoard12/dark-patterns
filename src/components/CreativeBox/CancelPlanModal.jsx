@@ -1,0 +1,77 @@
+import React, { useEffect, useState } from "react";
+import Paso1 from "./Modal/Paso1";
+import Paso2 from "./Modal/Paso2";
+import Paso3 from "./Modal/Paso3";
+
+//TODO: Cambiar texto por traduccion
+
+const CancelPlanModal = ({ onClose }) => {
+  const [hasSelection, setHasSelection] = useState(false);
+  const [step, setStep] = useState(1);
+
+  const nextStep = () => {
+    if (step === 1 && !hasSelection) return;
+    setStep(step + 1);
+  };
+
+  const previousStep = () => {
+    setStep(step - 1);
+  };
+
+  useEffect(() => {
+    if (step === 1) setHasSelection(false);
+    else if (step === 4) onClose();
+  }, [step]);
+
+  return (
+    <div className="fixed inset-0 flex items-center justify-center z-50 p-2">
+      {/* Overlay */}
+      <div
+        className="absolute inset-0 bg-black bg-opacity-50"
+        onClick={onClose}
+      ></div>
+
+      <div className="relative bg-white rounded-xl shadow-lg  p-6 z-10 overflow-y-auto h-[80vh] sm:h-auto">
+        {step == 1 && <Paso1 setHasSelection={setHasSelection} />}
+        {step == 2 && <Paso2 />}
+        {step == 3 && <Paso3 />}
+
+        <div className="mt-6 flex flex-col sm:flex-row justify-between items-start gap-1 text-xs">
+          <button
+            className="px-4 py-2 rounded-full border-2 border-black text-gray-700 hover:bg-gray-100"
+            onClick={onClose}
+          >
+            Mantener tu plan
+          </button>
+
+          <div className="flex gap-2 ">
+            {step > 1 && (
+              <button
+                className="px-4 py-2 rounded border border-black rounded-full hover:bg-gray-200"
+                onClick={previousStep}
+              >
+                Anterior
+              </button>
+            )}
+            <button
+              onClick={nextStep}
+              className={`px-4 py-2 rounded-full  ${
+                hasSelection
+                  ? step == 3
+                    ? "text-red-500 border border-red-500 hover:font-bold hover:border-red-600"
+                    : "hover:bg-gray-200 border border-black"
+                  : "cursor-not-allowed bg-gray-200 border-none text-gray-400"
+              }`}
+            >
+              {step == 1 && "Continuar"}
+              {step == 2 && "No, gracias"}
+              {step == 3 && "Confirmar cancelación"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CancelPlanModal;
