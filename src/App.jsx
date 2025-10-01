@@ -21,8 +21,14 @@ import { Account } from './Pages/EBook/Account';
 import { Books } from './Pages/EBook/Books';
 import { CancelMembership } from './Pages/EBook/CancelMembership';
 import { BooksOffer } from './Pages/EBook/BooksOffer';
+
 import { PassengerHome } from './Pages/Passenger/PassengerHome';
 import { PassengerIndex } from './Pages/Passenger/PassengerIndex';
+
+import { Home as CreativeBoxHome } from './Pages/CreativeBox/Home.jsx';
+import {Account as CreativeBoxAccount} from './Pages/CreativeBox/Account.jsx';
+
+
 import { updateDarkPatternState } from './utils/dark_patterns';
 import { StartPage } from './Pages/StartPage';
 import { WebsitesGroups } from './Pages/Dashboard/WebsitesGroups';
@@ -92,6 +98,9 @@ function App() {
             />
             <Route path="/ebook/books_offer" element={<BooksOffer />} />
           </Route>
+
+          <Route path="/creativebox" element={<CreativeBoxHome />} />
+          <Route path="/creativebox/account" element={<CreativeBoxAccount />} />
 
           <Route path="/dashboard" element={<WebsitesGroups />} />
           <Route
