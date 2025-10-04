@@ -4,7 +4,7 @@ import React from "react";
 
 function Sidebar({ actual, setActual }) {
   return (
-    <div className="bg-white shadow-md p-2 sm:p-4 w-64 h-screen flex flex-col min-w-[100px]">
+    <div className="bg-white shadow p-2 sm:p-4 w-64 h-screenflex flex-col min-w-[100px]">
       <h2 className="text-xl font-semibold mb-6 text-gray-800">Menú</h2>
       <ul className="flex flex-col gap-3">
         <li onClick={() => setActual("cuenta")} 

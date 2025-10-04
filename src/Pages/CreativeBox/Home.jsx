@@ -10,12 +10,13 @@ import logo2 from "../../assets/CreativeBox/logo2.jpeg";
 import fondo3 from "../../assets/CreativeBox/fondo3.jpg";
 import logo3 from "../../assets/CreativeBox/logo3.jpeg";
 import fondo4 from "../../assets/CreativeBox/fondo4.jpeg";
+import { Footer } from "../../components/CreativeBox/Footer";
 
 //TODO: Cambiar texto por traduccion
 
 export function Home() {
   return (
-    <div className="flex flex-col items-center gap-5 w-full bg-gray-100 h-screen overflow-y-auto pb-10">
+    <div className="flex flex-col justify-between items-center gap-5 w-full bg-gray-100 h-screen overflow-y-auto">
       <NavBar />
 
       <div
@@ -33,6 +34,7 @@ export function Home() {
         <ProductoBox imagen={fondo4} logo={logo1} nombre={"QuickCreatives"} descripcion={"Subtitula automáticamente tus vídeos en cualquier idioma"}  />
       </div>
 
+      <Footer />
     </div>
   );
 }
