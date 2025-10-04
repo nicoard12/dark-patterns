@@ -15,7 +15,7 @@ import fondo4 from "../../assets/CreativeBox/fondo4.jpeg";
 
 export function Home() {
   return (
-    <div className="flex flex-col items-center gap-5 w-full bg-gray-100 h-screen">
+    <div className="flex flex-col items-center gap-5 w-full bg-gray-100 h-screen overflow-y-auto pb-10">
       <NavBar />
 
       <div
