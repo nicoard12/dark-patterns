@@ -28,6 +28,11 @@ import { PassengerIndex } from './Pages/Passenger/PassengerIndex';
 import { Home as CreativeBoxHome } from './Pages/CreativeBox/Home.jsx';
 import {Account as CreativeBoxAccount} from './Pages/CreativeBox/Account.jsx';
 
+import {Home as TeatrumHome} from "./Pages/Teatrum/Home.jsx"
+import Event from './Pages/Teatrum/Event.jsx';
+import SelectPrice from './Pages/Teatrum/SelectPrice.jsx';
+import BuyTicket from './Pages/Teatrum/BuyTicket.jsx';
+
 
 import { updateDarkPatternState } from './utils/dark_patterns';
 import { StartPage } from './Pages/StartPage';
@@ -101,6 +106,11 @@ function App() {
 
           <Route path="/creativebox" element={<CreativeBoxHome />} />
           <Route path="/creativebox/account" element={<CreativeBoxAccount />} />
+
+          <Route path='/teatrum' element={<TeatrumHome />} />
+          <Route path='/teatrum/event/:id' element={<Event />} />
+          <Route path='/teatrum/select-price/:id' element={<SelectPrice />} />
+          <Route path='/teatrum/buy-ticket/:id' element={<BuyTicket />} />
 
           <Route path="/dashboard" element={<WebsitesGroups />} />
           <Route
