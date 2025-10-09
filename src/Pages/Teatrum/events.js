@@ -1,5 +1,13 @@
-import Shadows from "../../assets/Teatrum/Shadows.png"
-import Echoes from "../../assets/Teatrum/Echoes.png"
+import One from "../../assets/Teatrum/One.png"
+import Two from "../../assets/Teatrum/Two.png"
+import Three from "../../assets/Teatrum/Three.png"
+import Four from "../../assets/Teatrum/Four.jpeg"
+import Five from "../../assets/Teatrum/Five.png"
+import Six from "../../assets/Teatrum/Six.png"
+import Seven from "../../assets/Teatrum/Seven.png"
+import Eight from "../../assets/Teatrum/Eight.png"
+
+//descripciones distintas a las de la traduccion
 export const events = [
   {
     id: "1",
@@ -8,7 +16,7 @@ export const events = [
     date: "03/11/2025 20:30",
     description:
       "Un drama psicológico que explora los dilemas internos de sus personajes, atrapados entre decisiones difíciles y emociones intensas.",
-    img: Shadows
+    img: One
   },
   {
     id: "2",
@@ -17,7 +25,7 @@ export const events = [
     date: "05/11/2025 21:00",
     description:
       "Una historia de secretos familiares que se desvela lentamente, donde cada personaje guarda un pasado que impacta el presente.",
-    img: Echoes
+    img: Two
   },
   {
     id: "3",
@@ -26,7 +34,7 @@ export const events = [
     date: "10/11/2025 19:30",
     description:
       "Un viaje teatral que entrelaza diferentes épocas y vidas, mostrando cómo los momentos y decisiones se reflejan a través del tiempo.",
-    img: "https://via.placeholder.com/400x250?text=Fragments+of+Time"
+    img: Three
   },
   {
     id: "4",
@@ -35,7 +43,7 @@ export const events = [
     date: "12/11/2025 20:00",
     description:
       "Un drama íntimo en un espacio cerrado, donde los silencios y gestos revelan más que las palabras de los personajes.",
-    img: "https://via.placeholder.com/400x250?text=The+Silent+Room"
+    img: Four
   },
   {
     id: "5",
@@ -44,7 +52,7 @@ export const events = [
     date: "15/11/2025 21:30",
     description:
       "Una obra de suspenso que explora cómo los secretos y las mentiras afectan la vida de quienes los guardan y los descubren.",
-    img: "https://via.placeholder.com/400x250?text=Veil+of+Secrets"
+    img: Five
   },
   {
     id: "6",
@@ -53,7 +61,7 @@ export const events = [
     date: "18/11/2025 19:00",
     description:
       "Una tragedia donde las pasiones humanas y las ambiciones chocan, llevando a los personajes hacia un destino inevitable.",
-    img: "https://via.placeholder.com/400x250?text=Crimson+Horizon"
+    img: Six
   },
   {
     id: "7",
@@ -62,7 +70,7 @@ export const events = [
     date: "22/11/2025 20:30",
     description:
       "Un relato que conecta generaciones, explorando cómo las decisiones de antaño repercuten en el presente de manera inesperada.",
-    img: "https://via.placeholder.com/400x250?text=Whispers+of+the+Past"
+    img: Seven
   },
   {
     id: "8",
@@ -71,6 +79,6 @@ export const events = [
     date: "25/11/2025 21:00",
     description:
       "Una narrativa poética y visual que guía al público por un recorrido emocional y reflexivo a través de la vida de sus protagonistas.",
-    img: "https://via.placeholder.com/400x250?text=The+Emerald+Path"
+    img: Eight
   }
 ];

@@ -269,6 +269,55 @@
         }
         
     },
+    "Teatrum":{
+        "Home":{
+            "Calendar": "Calendario",
+            "History": "Historia",
+            "Layout": "Plano",
+            "Search": "Buscar",
+            "EmptyEvents": "Ningúna obra se titula con ese nombre"
+        },
+        "Event":{
+            "Buy": "Comprar",
+            "1": {
+                "Description": "Sumergite en un intenso drama psicológico donde las emociones y los dilemas internos te mantendrán al borde del asiento."
+            },
+            "2": {
+                "Description": "Descubrí una historia cargada de secretos familiares que se revelan poco a poco, envolviéndote en un ambiente de misterio y emoción."
+            },
+            "3": {
+                "Description": "Viví un viaje teatral único que entrelaza épocas y destinos, invitándote a reflexionar sobre las decisiones que marcan nuestras vidas."
+            },
+            "4": {
+                "Description": "Entrá a un espacio íntimo donde el silencio habla y cada gesto cuenta, en una experiencia teatral profunda y cautivadora."
+            },
+            "5": {
+                "Description": "Dejate llevar por una obra de suspenso donde cada secreto y mentira te acercan un poco más a una verdad inesperada."
+            },
+            "6": {
+                "Description": "Presenciá una tragedia intensa, donde pasiones y ambiciones chocan con fuerza en un destino que no da marcha atrás."
+            },
+            "7": {
+                "Description": "Acompañá un relato que une generaciones, mostrando cómo las decisiones del pasado resuenan poderosamente en el presente."
+            },
+            "8": {
+                "Description": "Embárcate en una experiencia poética y visual que te llevará por un recorrido emocional tan profundo como inspirador."
+            }
+
+        },
+        "Buy":{
+            "forward": "ADELANTE",
+            "middle": "MEDIO",
+            "back": "ATRÁS",
+            "ServiceCharge": "Cargo por servicio:",
+            "SelectLocation": "Selecciona Ubicación",
+            "SelectTickets": "Selecciona cantidad de entradas",
+            "BuyNow": "Comprar ahora",
+            "Tickets": "entrada(s)",
+            "TicketsPrice": "Precio entrada(s)",
+            "Checkout": "Finalizar compra"
+        }
+    },
     "Common": {
         "Select": "Seleccionar",
         "Start": "Iniciar",
