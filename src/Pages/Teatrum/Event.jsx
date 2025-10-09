@@ -30,12 +30,12 @@ function Event() {
             <p className="sm:w-1/2 text-1xl">{t(`Teatrum.Event.${event.id}.Description`)}</p>
           </div>
 
-          <div className="flex gap-3 items-center p-8 border border-red-800 rounded">
-            <p className="text-lg">
+          <div className="flex flex-col sm:flex-row justify-between gap-10 w-full items-center px-5">
+            <p className="text-lg p-5 border border-red-800 rounded">
               {event.date}
             </p>
 
-            <button onClick={() => navigate(`/teatrum/select-price/${event.id}`)} className="bg-black hover:bg-black/90 text-white p-1.5 px-4 rounded font-semibold text-lg">{t("Teatrum.Event.Buy")}</button>
+            <button onClick={() => navigate(`/teatrum/select-price/${event.id}`)} className="bg-black hover:bg-black/90 text-white p-3 px-5 rounded font-semibold text-2xl">{t("Teatrum.Event.Buy")}</button>
           </div>
         </div>
       </div>
