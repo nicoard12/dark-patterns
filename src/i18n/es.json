@@ -279,6 +279,7 @@
         },
         "Event":{
             "Buy": "Comprar",
+            "Date": "Fecha",
             "1": {
                 "Description": "Sumergite en un intenso drama psicológico donde las emociones y los dilemas internos te mantendrán al borde del asiento."
             },

@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 function Event() {
   const { id } = useParams();
   const event = events.find((ev) => ev.id === id);
-  const navigate= useNavigate()
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
@@ -25,17 +25,24 @@ function Event() {
         </div>
 
         <div className="flex flex-col gap-5 justify-between items-end">
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-3">
             <h1 className="font-semibold text-2xl">{event.title}</h1>
-            <p className="sm:w-1/2 text-1xl">{t(`Teatrum.Event.${event.id}.Description`)}</p>
+            <p className="sm:w-1/2 text-1xl">
+              {t(`Teatrum.Event.${event.id}.Description`)}
+            </p>
+            <h2 className="text-lg font-semibold">{t("Teatrum.Event.Date")}</h2>
+            <p className="text-lg px-0">
+              {event.date}
+            </p>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-between gap-10 w-full items-center px-5">
-            <p className="text-lg p-5 border border-red-800 rounded">
-              {event.date}
-            </p>
-
-            <button onClick={() => navigate(`/teatrum/select-price/${event.id}`)} className="bg-black hover:bg-black/90 text-white p-3 px-5 rounded font-semibold text-2xl">{t("Teatrum.Event.Buy")}</button>
+            <button
+              onClick={() => navigate(`/teatrum/select-price/${event.id}`)}
+              className="bg-black hover:bg-black/90 text-white p-3 px-5 rounded font-semibold text-2xl"
+            >
+              {t("Teatrum.Event.Buy")}
+            </button>
           </div>
         </div>
       </div>

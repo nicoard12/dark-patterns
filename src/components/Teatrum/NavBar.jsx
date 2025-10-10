@@ -8,12 +8,12 @@ function NavBar() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex justify-between items-center h-20 w-full bg-white shadow">
+    <div className="flex justify-between items-center h-20 w-full bg-black text-white shadow">
       <p
         onClick={() => navigate("/teatrum")}
-        className="flex italic text-sm sm:text-2xl font-semibold text-red-900 p-3 cursor-pointer"
+        className="flex italic text-sm sm:text-2xl font-semibold  p-3 cursor-pointer"
       >
-        <i className="hidden sm:inline fa-solid fa-theater-masks text-orange-800"></i>
+        <i className="hidden sm:inline fa-solid fa-theater-masks text-red-900"></i>
         Teatrum
       </p>
 
