@@ -41,6 +41,10 @@ function SelectPrice() {
     } else setTotal(event.price * selectedAmount);
   }, [selectedLocation, selectedAmount]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <NavBar />

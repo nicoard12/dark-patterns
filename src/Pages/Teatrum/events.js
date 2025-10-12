@@ -16,7 +16,23 @@ export const events = [
     date: "03/11/2025 20:30",
     description:
       "Un drama psicológico que explora los dilemas internos de sus personajes, atrapados entre decisiones difíciles y emociones intensas.",
-    img: One
+    img: One,
+    stars: 4,
+    opinions: 3401,
+    comments: [
+      {
+        name: "Monica",
+        rating: 5
+      },
+      {
+        name: "Nicolas",
+        rating: 5
+      },
+      {
+        name: "Maria",
+        rating: 5
+      }
+    ]
   },
   {
     id: "2",
@@ -25,7 +41,23 @@ export const events = [
     date: "05/11/2025 21:00",
     description:
       "Una historia de secretos familiares que se desvela lentamente, donde cada personaje guarda un pasado que impacta el presente.",
-    img: Two
+    img: Two,
+    stars: 5,
+    opinions: 3127,
+    comments: [
+      {
+        name: "Olivia",
+        rating: 5
+      },
+      {
+        name: "Jazmin",
+        rating: 5
+      },
+      {
+        name: "Bob",
+        rating: 4.5
+      }
+    ]
   },
   {
     id: "3",
@@ -34,7 +66,23 @@ export const events = [
     date: "10/11/2025 19:30",
     description:
       "Un viaje teatral que entrelaza diferentes épocas y vidas, mostrando cómo los momentos y decisiones se reflejan a través del tiempo.",
-    img: Three
+    img: Three,
+    stars: 3.5,
+    opinions: 2502,
+    comments: [
+      {
+        name: "Daniel",
+        rating: 4
+      },
+      {
+        name: "Matthew",
+        rating: 5
+      },
+      {
+        name: "Lauren",
+        rating: 4.5
+      }
+    ]
   },
   {
     id: "4",
@@ -43,7 +91,23 @@ export const events = [
     date: "12/11/2025 20:00",
     description:
       "Un drama íntimo en un espacio cerrado, donde los silencios y gestos revelan más que las palabras de los personajes.",
-    img: Four
+    img: Four,
+    stars: 4,
+    opinions: 2130,
+    comments: [
+      {
+        name: "Megan",
+        rating: 4.5
+      },
+      {
+        name: "Joshua",
+        rating: 4.5
+      },
+      {
+        name: "Amanda",
+        rating: 4.5
+      }
+    ]
   },
   {
     id: "5",
@@ -52,7 +116,23 @@ export const events = [
     date: "15/11/2025 21:30",
     description:
       "Una obra de suspenso que explora cómo los secretos y las mentiras afectan la vida de quienes los guardan y los descubren.",
-    img: Five
+    img: Five,
+    stars: 5,
+    opinions: 1799,
+    comments: [
+      {
+        name: "Kevin",
+        rating: 4
+      },
+      {
+        name: "Ryan",
+        rating: 4.5
+      },
+      {
+        name: "Christopher",
+        rating: 4.5
+      }
+    ]
   },
   {
     id: "6",
@@ -61,7 +141,23 @@ export const events = [
     date: "18/11/2025 19:00",
     description:
       "Una tragedia donde las pasiones humanas y las ambiciones chocan, llevando a los personajes hacia un destino inevitable.",
-    img: Six
+    img: Six,
+    stars: 4.5,
+    opinions: 2622,
+    comments: [
+      {
+        name: "Maria",
+        rating: 5
+      },
+      {
+        name: "Andrew",
+        rating: 5
+      },
+      {
+        name: "Emma",
+        rating: 5
+      }
+    ]
   },
   {
     id: "7",
@@ -70,7 +166,23 @@ export const events = [
     date: "22/11/2025 20:30",
     description:
       "Un relato que conecta generaciones, explorando cómo las decisiones de antaño repercuten en el presente de manera inesperada.",
-    img: Seven
+    img: Seven,
+    stars: 5,
+    opinions: 2504,
+    comments: [
+      {
+        name: "Ashley",
+        rating: 4
+      },
+      {
+        name: "Jessica",
+        rating: 4
+      },
+      {
+        name: "David",
+        rating: 5
+      }
+    ]
   },
   {
     id: "8",
@@ -79,6 +191,22 @@ export const events = [
     date: "25/11/2025 21:00",
     description:
       "Una narrativa poética y visual que guía al público por un recorrido emocional y reflexivo a través de la vida de sus protagonistas.",
-    img: Eight
+    img: Eight,
+    stars: 5,
+    opinions: 1803,
+    comments: [
+      {
+        name: "Michael",
+        rating: 5
+      },
+      {
+        name: "Monica",
+        rating: 5
+      },
+      {
+        name: "Emily",
+        rating: 5
+      }
+    ]
   }
 ];

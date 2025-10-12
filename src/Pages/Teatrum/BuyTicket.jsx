@@ -63,128 +63,178 @@ function BuyTicket() {
 
   const { event, selectedLocation, selectedAmount, total } = state;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <NavBar />
-      <div className="bg-gray-600 flex flex-col sm:flex-row justify-between text-white gap-5 p-3 px-6">
-        <div className="flex flex-col gap-2">
-          <h1 className="text-2xl font-semibold">{event.title}</h1>
-          <p>{event.date}</p>
-          <p>Teatrum</p>
+
+      <div className="flex flex-col sm:flex-row items-start p-5 gap-5">
+        <div className="flex flex-col w-full sm:hidden bg-red-800 gap-14 text-white p-3 px-10 rounded ">
+          <div className="flex flex-col gap-2">
+            <h1 className="text-2xl font-semibold">{event.title}</h1>
+            <p>{event.date}</p>
+            <p>Teatrum</p>
+          </div>
+
+          <div className="flex flex-col items-center justify-center ">
+            <p className="text-lg font-semibold">
+              {selectedAmount} {t("Teatrum.Buy.Tickets")}{" "}
+              {t(`Teatrum.Buy.${selectedLocation}`)}
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <p>
+              {t("Teatrum.Buy.TicketsPrice")} ${total}
+            </p>
+            <p>
+              {t("Teatrum.Buy.ServiceCharge")} ${Math.floor(total * 0.15)}
+            </p>
+            <h1 className="text-3xl font-semibold">
+              Total ${total + Math.floor(total * 0.15)}
+            </h1>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center">
-          <p className="text-lg font-semibold">
-            {selectedAmount} {t("Teatrum.Buy.Tickets")} {t(`Teatrum.Buy.${selectedLocation}`)}
-          </p>
-        </div>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col flex-1 px-10 sm:px-20 lg:px-40 gap-5 sm:items-center"
+        >
+          <div className="bg-neutral-200 p-6 rounded sm:w-full ">
+            <div className="">
+              <div className="my-4">
+                <label htmlFor="fullName">{t("Roomio.Summary.Name")}</label>
+                <Input
+                  id="fullName"
+                  placeholder="Andrea Paz"
+                  {...register("fullName", { required: true })}
+                  errors={errors.fullName}
+                />
+              </div>
 
-        <div className="flex flex-col gap-2">
-          <p>{t("Teatrum.Buy.TicketsPrice")} ${total}</p>
-          <p>{t("Teatrum.Buy.ServiceCharge")}  ${Math.floor(total * 0.15)}</p>
-          <h1 className="text-2xl font-semibold">Total ${total + Math.floor(total * 0.15)}</h1>
+              <div className="my-4">
+                <label htmlFor="email">E-mail</label>
+                <Input
+                  id="email"
+                  placeholder="andrea.paz@mail.com"
+                  {...register("email", { required: true })}
+                  errors={errors.email}
+                />
+                {errors.email && (
+                  <FieldError message={"Ingrese un email válido"} />
+                )}
+              </div>
+            </div>
+          </div>
+          <div className="bg-neutral-200 p-6 rounded sm:w-full">
+            <div className="flex my-4">
+              <div className="w-1/3 mr-8 relative">
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t("Rental.Review.Payment.Card.Number"),
+                  }}
+                ></p>
+                <Input
+                  type="text"
+                  placeholder="XXXX XXXX XXXX XXXX"
+                  onFocus={() => setShowAutocompleteCard(true)}
+                  onBlur={() => setShowAutocompleteCard(false)}
+                  {...register("x-number", { required: true })}
+                  errors={errors["x-number"]}
+                />
+                {showAutocompleteCard && (
+                  <div id="autocompleteCard" onClick={autocompleteCard}>
+                    <h6 className="font-medium text-base">
+                      Autocomplete Credit Card
+                    </h6>
+                    <p>**** **** **** 4324 VISA</p>
+                  </div>
+                )}
+              </div>
+              <div className="w-1/3">
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t("Rental.Review.Payment.Card.Holder"),
+                  }}
+                ></p>
+                <Input
+                  type="text"
+                  placeholder="Andrea Paz"
+                  {...register("x-name", { required: true })}
+                  errors={errors["x-name"]}
+                />
+              </div>
+            </div>
+            <div className="flex my-4">
+              <div className="w-1/6 mr-8">
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: `${t("Rental.Review.Payment.Card.Month")}/${t(
+                      "Rental.Review.Payment.Card.Year"
+                    )}`,
+                  }}
+                ></p>
+                <Input
+                  placeholder="MM/AA"
+                  {...register("x-expiry", { required: true })}
+                  errors={errors["x-expiry"]}
+                />
+              </div>
+              <div className="">
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t("Rental.Review.Payment.Card.CVV"),
+                  }}
+                ></p>
+                <Input
+                  type="password"
+                  placeholder="***"
+                  {...register("x-code", { required: true })}
+                  errors={errors["x-code"]}
+                />
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            className="bg-black hover:bg-black/90 text-white p-1.5 px-4 rounded font-semibold text-lg"
+          >
+            {t("Teatrum.Buy.Checkout")}
+          </button>
+        </form>
+
+        <div className="hidden sm:flex bg-red-800 flex-col items-start gap-14 text-white p-3 px-14 pl-10 rounded ">
+          <div className="flex flex-col gap-2">
+            <h1 className="text-2xl font-semibold">{event.title}</h1>
+            <p>{event.date}</p>
+            <p>Teatrum</p>
+          </div>
+
+          <div className="flex flex-col items-center justify-center ">
+            <p className="text-lg font-semibold">
+              {selectedAmount} {t("Teatrum.Buy.Tickets")}{" "}
+              {t(`Teatrum.Buy.${selectedLocation}`)}
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <p>
+              {t("Teatrum.Buy.TicketsPrice")} ${total}
+            </p>
+            <p>
+              {t("Teatrum.Buy.ServiceCharge")} ${Math.floor(total * 0.15)}
+            </p>
+            <h1 className="text-3xl font-semibold">
+              Total ${total + Math.floor(total * 0.15)}
+            </h1>
+          </div>
         </div>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col p-5 gap-5 sm:items-center">
-            <div className="bg-neutral-200 p-6 rounded sm:w-1/2">
-              <div className="sm:w-1/3">
-                <div className="my-4">
-                  <label htmlFor="fullName">{t("Roomio.Summary.Name")}</label>
-                  <Input
-                    id="fullName"
-                    placeholder="Andrea Paz"
-                    {...register("fullName", { required: true })}
-                    errors={errors.fullName}
-                  />
-                </div>
-
-                <div className="my-4">
-                  <label htmlFor="email">E-mail</label>
-                  <Input
-                    id="email"
-                    placeholder="andrea.paz@mail.com"
-                    {...register("email", { required: true })}
-                    errors={errors.email}
-                  />
-                  {errors.email && (
-                    <FieldError message={"Ingrese un email válido"} />
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className="bg-neutral-200 p-6 rounded sm:w-1/2">
-              <div className="flex my-4">
-                <div className="w-1/3 mr-8 relative">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: t("Rental.Review.Payment.Card.Number"),
-                    }}
-                  ></p>
-                  <Input
-                    type="text"
-                    placeholder="XXXX XXXX XXXX XXXX"
-                    onFocus={() => setShowAutocompleteCard(true)}
-                    onBlur={() => setShowAutocompleteCard(false)}
-                    {...register("x-number", { required: true })}
-                    errors={errors["x-number"]}
-                  />
-                  {showAutocompleteCard && (
-                    <div id="autocompleteCard" onClick={autocompleteCard}>
-                      <h6 className="font-medium text-base">
-                        Autocomplete Credit Card
-                      </h6>
-                      <p>**** **** **** 4324 VISA</p>
-                    </div>
-                  )}
-                </div>
-                <div className="w-1/3">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: t("Rental.Review.Payment.Card.Holder"),
-                    }}
-                  ></p>
-                  <Input
-                    type="text"
-                    placeholder="Andrea Paz"
-                    {...register("x-name", { required: true })}
-                    errors={errors["x-name"]}
-                  />
-                </div>
-              </div>
-              <div className="flex my-4">
-                <div className="w-1/6 mr-8">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: `${t("Rental.Review.Payment.Card.Month")}/${t(
-                        "Rental.Review.Payment.Card.Year"
-                      )}`,
-                    }}
-                  ></p>
-                  <Input
-                    placeholder="MM/AA"
-                    {...register("x-expiry", { required: true })}
-                    errors={errors["x-expiry"]}
-                  />
-                </div>
-                <div className="sm:w-1/12">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: t("Rental.Review.Payment.Card.CVV"),
-                    }}
-                  ></p>
-                  <Input
-                    type="password"
-                    placeholder="***"
-                    {...register("x-code", { required: true })}
-                    errors={errors["x-code"]}
-                  />
-                </div>
-              </div>
-            </div>
-
-            <button type="submit" className="bg-black hover:bg-black/90 text-white p-1.5 px-4 rounded font-semibold text-lg">{t("Teatrum.Buy.Checkout")}</button>
-      </form>
       <Footer />
     </div>
   );
