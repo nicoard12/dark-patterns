@@ -207,7 +207,7 @@ function BuyTicket() {
           </button>
         </form>
 
-        <div className="hidden sm:flex bg-red-800 flex-col items-start gap-14 text-white p-3 px-14 pl-10 rounded ">
+        <div className="hidden sm:flex bg-red-800 flex-col items-start gap-14 text-white p-3 px-14 pl-10 rounded shadow">
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-semibold">{event.title}</h1>
             <p>{event.date}</p>

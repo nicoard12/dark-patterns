@@ -33,6 +33,10 @@ import Event from './Pages/Teatrum/Event.jsx';
 import SelectPrice from './Pages/Teatrum/SelectPrice.jsx';
 import BuyTicket from './Pages/Teatrum/BuyTicket.jsx';
 
+import {Home as PetspaceHome} from "./Pages/Petspace/Home.jsx"
+import {Product as PetProduct} from "./Pages/Petspace/Product.jsx"
+import {BuyProduct as BuyPetProduct} from "./Pages/Petspace/BuyProduct.jsx"
+
 
 import { updateDarkPatternState } from './utils/dark_patterns';
 import { StartPage } from './Pages/StartPage';
@@ -111,6 +115,10 @@ function App() {
           <Route path='/teatrum/event/:id' element={<Event />} />
           <Route path='/teatrum/select-price/:id' element={<SelectPrice />} />
           <Route path='/teatrum/buy-ticket/:id' element={<BuyTicket />} />
+
+          <Route path='/petspace' element={<PetspaceHome />} />
+          <Route path='/petspace/product/:id' element={<PetProduct />} />
+          <Route path='/petspace/buy/:id' element={<BuyPetProduct />} />
 
           <Route path="/dashboard" element={<WebsitesGroups />} />
           <Route
