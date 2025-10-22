@@ -19,9 +19,9 @@ export function Home() {
           className="flex justify-between items-center  w-full bg-cover bg-center px-4 py-40"
           style={{ backgroundImage: `url(${Banner})` }}
         >
-          <i className="fa-solid fa-chevron-left text-gray-500 text-2xl cursor-pointer"></i>
+          <i className="fa-solid fa-chevron-left text-gray-500 text-2xl cursor-pointer hover:text-white"></i>
           <Search events={events} setEventsState={setEventsState} />
-          <i className="fa-solid fa-chevron-right text-gray-500 text-2xl cursor-pointer"></i>
+          <i className="fa-solid fa-chevron-right text-gray-500 text-2xl cursor-pointer hover:text-white"></i>
         </div>
         {eventsState.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">

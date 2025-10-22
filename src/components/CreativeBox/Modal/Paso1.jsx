@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import logo from "../../../assets/CreativeBox/CreativeboxStock.png";
+import { useTranslation } from "react-i18next";
 
 function Paso1({setHasSelection}) {
   const [selected, setSelected] = useState([false, false, false, false]);
-
+  const { t } = useTranslation();
+  
   const toggleCheck = (index) => {
     const updated = [...selected];
     updated[index] = !updated[index];
@@ -14,9 +16,9 @@ function Paso1({setHasSelection}) {
 
   return (
     <div>
-      <h2 className="text-lg font-semibold">Sentimos que nos dejes.</h2>
+      <h2 className="text-lg font-semibold">{t("CreativeBox.Modal.Title1")}</h2>
       <p className="text-sm text-gray-600 mb-4">
-        ¿Cuál de estos elementos describe tu experiencia?
+        {t("CreativeBox.Modal.SubTitle")}
       </p>
 
       <div className="space-y-2 text-sm">
@@ -27,7 +29,7 @@ function Paso1({setHasSelection}) {
             onChange={() => toggleCheck(0)}
             className="accent-black"
           />
-          Resulta demasiado caro.
+          {t("CreativeBox.Modal.Option1")}
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -36,7 +38,7 @@ function Paso1({setHasSelection}) {
             onChange={() => toggleCheck(1)}
             className="accent-black"
           />
-          Las aplicaciones no funcionaron como esperaba.
+          {t("CreativeBox.Modal.Option2")}
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -45,7 +47,7 @@ function Paso1({setHasSelection}) {
             onChange={() => toggleCheck(2)}
             className="accent-black"
           />
-          Tengo demasiados problemas técnicos.
+          {t("CreativeBox.Modal.Option3")}
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -54,18 +56,18 @@ function Paso1({setHasSelection}) {
             onChange={() => toggleCheck(3)}
             className="accent-black"
           />
-          Necesitaba los productos para un proyecto que ya he terminado.
+          {t("CreativeBox.Modal.Option4")}
         </label>
       </div>
 
-      <h2 className="font-semibold mt-5">Detalles del plan</h2>
+      <h2 className="font-semibold mt-5">{t("CreativeBox.Modal.PlanDetails")}</h2>
       <div className=" border rounded-lg p-4 flex items-center gap-4">
         <img src={logo} className="w-7 h-7 rounded" alt="" />
         <div>
           <p className="font-medium">Creativebox Stock+AI</p>
-          <p className="text-sm text-gray-600">Plan mensual - $25/mes</p>
+          <p className="text-sm text-gray-600">{t("CreativeBox.Modal.MonthlyPlan")} - $25/{t("CreativeBox.Modal.Month")}</p>
         </div>
-      </div>
+      </div> 
     </div>
   );
 }

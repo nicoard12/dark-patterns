@@ -1,7 +1,9 @@
 import React from 'react'
-//TODO: Cambiar texto por traduccion
+import { useTranslation } from 'react-i18next';
 
 function ProductoBox({nombre, descripcion, imagen, logo, esPlan=false, esCambiarPlan=false, setOpenModal}) {
+  const { t } = useTranslation();
+
   return (
     <div className={`border max-w-xs rounded ${!esPlan && "cursor-pointer hover:bg-gray-200"} shadow bg-white`}>
         <div className='w-full h-24 bg-cover bg-center rounded-tl rounded-tr' style={{ backgroundImage: `url(${imagen})` }}>
@@ -14,7 +16,7 @@ function ProductoBox({nombre, descripcion, imagen, logo, esPlan=false, esCambiar
         
         {esPlan ?
           <div className='flex items-center justify-center'>
-            <button onClick={() => setOpenModal(true)} className='my-3 rounded border border-black p-1 px-3 rounded-full hover:bg-gray-200 font-semibold'>{esCambiarPlan ? "Cambiar" : "Cancelar"} plan</button>
+            <button onClick={() => setOpenModal(true)} className='my-3 rounded border border-black p-1 px-3 rounded-full hover:bg-gray-200 font-semibold'>{esCambiarPlan ? t("CreativeBox.Plan.Change") : t("CreativeBox.Plan.Cancel")} plan</button>
           </div>
         :
           <div className='flex gap-1 items-center'>

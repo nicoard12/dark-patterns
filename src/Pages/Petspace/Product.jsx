@@ -4,14 +4,16 @@ import { products } from "./Home";
 import Navbar from "../../components/Petspace/Navbar";
 import { Footer } from "../../components/Petspace/Footer";
 import Modal from "../../components/Petspace/Modal";
+import { useTranslation } from "react-i18next";
 
 export function Product() {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
-  if (!product) return <div>Producto no encontrado</div>;
+  if (!product) return <div>{t("PetSpace.Product.NotFound")}</div>;
 
   const totalPrice = product.priceKg * product.amountKg;
 
@@ -61,18 +63,18 @@ export function Product() {
             </div>
 
             <p className="text-gray-600 text-lg">
-              Precio por kg:{" "}
+              {t("PetSpace.Product.PriceKg")}:{" "}
               <span className="font-semibold">${product.priceKg}</span>
             </p>
             <p className="text-gray-600 text-lg">
-              Cantidad:{" "}
+              {t("PetSpace.Product.Amount")}:{" "}
               <span className="font-semibold">{product.amountKg} kg</span>
             </p>
             <p className="text-xl font-semibold text-blue-600">
-              Precio total: ${totalPrice}
+              {t("PetSpace.Product.TotalPrice")}: ${totalPrice}
             </p>
             <p className="text-gray-700 text-base leading-relaxed">
-              {product.description || "Descripción detallada del producto."}
+              {t(`PetSpace.Product.${product.id}.Description`)}
             </p>
           </div>
 
@@ -81,10 +83,10 @@ export function Product() {
               onClick={handleBuyNow}
               className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg font-bold transition-all shadow-lg hover:shadow-xl"
             >
-              Comprar ahora
+              {t("PetSpace.Product.BuyNow")}
             </button>
             <button className="w-full text-gray-800 px-6 py-3 rounded-xl text-lg font-medium border border-gray-300 hover:bg-gray-100 transition-all">
-              Agregar al carrito
+              {t("PetSpace.Product.AddToCart")}
             </button>
           </div>
         </div>

@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const navigate= useNavigate()
+  const { t } = useTranslation();
   return (
     <nav className="flex items-center justify-between bg-white shadow-md px-6 py-4 sticky top-0 z-50">
       <div onClick={() => navigate("/petspace")} className="flex items-center gap-2 cursor-pointer">
@@ -11,16 +13,16 @@ export const Navbar = () => {
       </div>
       <ul className="hidden sm:flex gap-6 text-gray-700 font-medium">
         <li href="#" className="hover:text-blue-600 transition-colors cursor-pointer">
-          Inicio
+          {t("PetSpace.NavBar.Home")}
         </li>
         <li href="#" className="hover:text-blue-600 transition-colors cursor-pointer">
-          Productos
+          {t("PetSpace.NavBar.Products")}
         </li>
         <li href="#" className="hover:text-blue-600 transition-colors cursor-pointer">
-          Ofertas
+          {t("PetSpace.NavBar.Offers")}
         </li>
         <li href="#" className="hover:text-blue-600 transition-colors cursor-pointer">
-          Contacto
+          {t("PetSpace.NavBar.Contact")}
         </li>
       </ul>
       <div className="flex gap-4 items-center">

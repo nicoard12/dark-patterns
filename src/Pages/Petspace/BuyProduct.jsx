@@ -52,7 +52,7 @@ export function BuyProduct() {
     setValue("x-code", "322");
   };
 
-  if (!product) return <div>Producto no encontrado</div>;
+  if (!product) return <div>{t("PetSpace.Product.NotFound")}</div>;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -67,7 +67,7 @@ export function BuyProduct() {
           className="flex flex-col flex-1 px-6 sm:px-10 lg:px-20 gap-6 sm:items-center bg-white p-8 rounded-3xl shadow-xl"
         >
           <h2 className="text-3xl font-bold mb-6 text-gray-800">
-            Datos de pago
+            {t("PetSpace.BuyProduct.Title")}
           </h2>
 
           <div className="bg-gray-100 p-6 rounded-2xl w-full">
@@ -201,19 +201,19 @@ export function BuyProduct() {
             type="submit"
             className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all mt-4"
           >
-            Confirmar compra
+            {t("PetSpace.BuyProduct.ConfirmPurchase")}
           </button>
         </form>
 
         <div className="w-full lg:w-1/3 bg-white p-6 rounded-2xl shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">Resumen del pedido</h2>
+          <h2 className="text-2xl font-bold mb-4">{t("PetSpace.BuyProduct.OrderSummary")}</h2>
           <div className="flex flex-col gap-4">
             <div className="flex justify-between">
               <span>{product.name}</span>
               <span>${(product.priceKg * product.amountKg).toFixed(2)}</span>
             </div>
             <div className="flex justify-between">
-              <span>Cantidad</span>
+              <span>{t("PetSpace.BuyProduct.Amount")}</span>
               <span>{product.amountKg} kg</span>
             </div>
             <hr className="my-2" />

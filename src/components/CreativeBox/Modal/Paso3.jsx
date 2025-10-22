@@ -1,33 +1,27 @@
 import React from "react";
-
-//TODO: Cambiar texto por traduccion
+import { useTranslation } from "react-i18next";
 
 function Paso3() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col gap-4 sm:w-[500px]">
       <h1 className="text-lg font-semibold">
-        Entre los detalles de cancelación se encuentran los siguientes:
+        {t("CreativeBox.Modal.Title3")}
       </h1>
       <div className="flex flex-col gap-2 ">
         <div>
-            <h2 className="text-md font-semibold">Fecha del plan</h2>
-            <p>Perderás acceso a tu plan inmediatamente.</p>
+            <h2 className="text-md font-semibold">{t("CreativeBox.Modal.Detail1.Title")}</h2>
+            <p>{t("CreativeBox.Modal.Detail1.Description")}</p>
         </div>
 
         <div>
-            <h2 className="text-md font-semibold">Aplicaciones</h2>
-            <p>
-            Ya no dispondrás de acceso a tus aplicaciones, ni a la mayoría de los
-            servicios incluidos en tu plan de pago.
-            </p>
+            <h2 className="text-md font-semibold">{t("CreativeBox.Modal.Detail2.Title")}</h2>
+            <p>{t("CreativeBox.Modal.Detail2.Description")}</p>
         </div>
         <div>
-            <h2 className="text-md font-semibold">Almacenamiento</h2>
-            <p>
-            El almacenamiento en la nube se reducirá a 5GB. Si se supera este
-            límite, tendrás 90 días para limitar tu uso en línea o podrías perder
-            el acceso a algunos o todos los archivos guardados.
-            </p>
+            <h2 className="text-md font-semibold">{t("CreativeBox.Modal.Detail3.Title")}</h2>
+            <p>{t("CreativeBox.Modal.Detail3.Description")}</p>
         </div>
       </div>
     </div>

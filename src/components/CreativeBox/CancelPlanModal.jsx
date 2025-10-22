@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import Paso1 from "./Modal/Paso1";
 import Paso2 from "./Modal/Paso2";
 import Paso3 from "./Modal/Paso3";
-
-//TODO: Cambiar texto por traduccion
+import { useTranslation } from "react-i18next";
 
 const CancelPlanModal = ({ onClose }) => {
   const [hasSelection, setHasSelection] = useState(false);
   const [step, setStep] = useState(1);
+  const { t } = useTranslation();
 
   const nextStep = () => {
     if (step === 1 && !hasSelection) return;
@@ -41,7 +41,7 @@ const CancelPlanModal = ({ onClose }) => {
             className="px-4 py-2 rounded-full border-2 border-black text-gray-700 hover:bg-gray-100"
             onClick={onClose}
           >
-            Mantener tu plan
+            {t("CreativeBox.Modal.KeepPlan")}
           </button>
 
           <div className="flex gap-2 ">
@@ -50,7 +50,7 @@ const CancelPlanModal = ({ onClose }) => {
                 className="px-4 py-2 rounded border border-black rounded-full hover:bg-gray-200"
                 onClick={previousStep}
               >
-                Anterior
+                {t("CreativeBox.Modal.Previous")}
               </button>
             )}
             <button
@@ -63,9 +63,9 @@ const CancelPlanModal = ({ onClose }) => {
                   : "cursor-not-allowed bg-gray-200 border-none text-gray-400"
               }`}
             >
-              {step == 1 && "Continuar"}
-              {step == 2 && "No, gracias"}
-              {step == 3 && "Confirmar cancelación"}
+              {step == 1 && t("CreativeBox.Modal.Next")}
+              {step == 2 && t("CreativeBox.Modal.NoThanks")}
+              {step == 3 && t("CreativeBox.Modal.ConfirmCancellation")}
             </button>
           </div>
         </div>

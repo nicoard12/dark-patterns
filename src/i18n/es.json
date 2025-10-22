@@ -269,6 +269,91 @@
         }
         
     },
+    "CreativeBox":{
+        "Home":{
+            "CreateSomethingNew": "Crea algo nuevo",
+            "Image": "Imagen",
+            "Generate": "Generar",
+            "Product1Description": "Genera una nueva imagen  para añadirla a tu proyecto",
+            "Product2Description": "Encuentra la fuente perfecta que complemente tu diseño",
+            "Product3Description": "Genera gráficos vectoriales  a partir de una descripción detallada",
+            "Product4Description": "Subtitula automáticamente tus vídeos en cualquier idioma"
+        },
+        "NavBar":{
+            "Design": "Creatividad y diseño",
+            "Marketing": "Marketing y Comercio",
+            "Learning": "Aprendizaje y asistencia",
+            "Settings": "Configuración",
+            "Account": "Mi cuenta",
+            "Logout": "Cerrar sesión"
+        },
+        "Sidebar":{
+            "Menu": "Menú",
+            "Account": "Cuenta",
+            "Plans": "Mis Planes",
+            "ContactPreferences": "Preferencias de contacto"
+        },
+        "Account":{
+            "BoxAccountInfo1": "Imagen del perfil",
+            "BoxAccountInfo2": "Nombre de la cuenta",
+            "BoxAccountInfo3": "Nombre de usuario CreativeBox",
+            "BoxAccountInfo4": "Empresa",
+            "BoxAccountInfo5": "Correo electrónico",
+            "BoxAccountInfo6": "Teléfono",
+            "NotAdded": "No añadido",
+            "Add": "Añadir"
+        },
+        "Plan":{
+            "Included": "Incluido en tu plan",
+            "CreativeboxImages": "Imágenes de Creativebox",
+            "GenerativeAI": "Usos de la IA generativa",
+            "Description": "Accede a millones de imágenes, videos 4k y HD, plantillas y mucho más sin derechos de autor, todo en el mismo plan.",
+            "Cancel": "Cancelar",
+            "Change": "Cambiar"
+        },
+        "Modal":{
+            "KeepPlan": "Mantener tu plan",
+            "Previous": "Anterior",
+            "Next": "Siguiente",
+            "NoThanks": "No, gracias",
+            "ConfirmCancellation": "Confirmar cancelación",
+            "Title1": "Sentimos que nos dejes.",
+            "SubTitle": "¿Cuál de estos elementos describe tu experiencia?",
+            "Option1": "Resulta demasiado caro.",
+            "Option2": "Las aplicaciones no funcionaron como esperaba.",
+            "Option3": "Tengo demasiados problemas técnicos.",
+            "Option4": "Necesitaba los productos para un proyecto que ya he terminado.",
+            "PlanDetails": "Detalles del plan",
+            "MonthlyPlan": "Plan mensual",
+            "Month": "mes",
+            "Title2": "Antes de decidirte por cancelar, considera estas ofertas:",
+            "Product1": {
+                "Title": "Cambia a PixelForge y ahorra",
+                "Description": "Ahorra ya mismo cambiando a PixelForge desde tu plan actual de $25/mes.\nA partir de $20."
+            },
+            "Product2": {
+                "Title": "Cambia a Frameflow y ahorra",
+                "Description": "Ahorra ya mismo cambiando a Frameflow desde tu plan actual de $25/mes.\nA partir de $18."
+            },
+            "Product3": {
+                "Title": "Cambia a QuickCreatives y ahorra",
+                "Description": "Ahorra ya mismo cambiando a QuickCreatives desde tu plan actual de $25/mes.\nA partir de $15."
+            },
+            "Title3": "Entre los detalles de cancelación se encuentran los siguientes:",
+            "Detail1":{
+                "Title": "Fecha del plan",
+                "Description": "Perderás acceso a tu plan inmediatamente."
+            },
+            "Detail2":{
+                "Title": "Aplicaciones",
+                "Description": "Ya no dispondrás de acceso a tus aplicaciones, ni a la mayoría de los servicios incluidos en tu plan de pago."
+            },
+            "Detail3":{
+                "Title": "Almacenamiento",
+                "Description": "El almacenamiento en la nube se reducirá a 5GB. Si se supera este límite, tendrás 90 días para limitar tu uso en línea o podrías perder el acceso a algunos o todos los archivos guardados."
+            }
+        }
+    },
     "Teatrum":{
         "Home":{
             "Calendar": "Calendario",
@@ -342,6 +427,51 @@
             "Tickets": "entrada(s)",
             "TicketsPrice": "Precio entrada(s)",
             "Checkout": "Finalizar compra"
+        }
+    },
+    "PetSpace":{
+        "Home":{
+            "Title": "Todo lo que tu mascota necesita, en un solo lugar",
+            "Subtitle": "Alimentos, juguetes y accesorios con envío rápido y precios increíbles.",
+            "SeeProducts": "Ver productos",
+            "FeaturedProducts": "Productos destacados"
+        },
+        "NavBar":{
+            "Home": "Inicio",
+            "Products": "Productos",
+            "Offers": "Ofertas",
+            "Contact": "Contacto"
+        },
+        "Product":{
+            "NotFound": "Producto no encontrado",
+            "PriceKg": "Precio por kg",
+            "Amount": "Cantidad",
+            "TotalPrice": "Precio total",
+            "BuyNow": "Comprar ahora",
+            "AddToCart": "Agregar al carrito",
+            "1":{
+                "Description": "Croquetas crujientes y nutritivas, ideales para perros adultos de todas las razas. Contienen vitaminas y minerales esenciales para mantenerlos activos y saludables."
+            },
+            "2":{
+                "Description": "Alimento que promueve la felicidad y el bienestar de tu mascota. Rico en proteínas y con ingredientes naturales que cuidan su digestión."
+            },
+            "3":{
+                "Description": "Snacks y croquetas especiales para perros con energía alta. Sabor irresistible y textura crujiente que hará que muevan la cola de alegría."
+            },
+            "4":{
+                "Description": "Alimento premium gourmet para mascotas exigentes. Con ingredientes de alta calidad que promueven un pelaje brillante y una salud óptima."
+            }
+        },
+        "Modal": {
+            "Title": "¡Llegá al mínimo de compra de $50 y llevate snacks de regalo para tu mascota!",
+            "AddProduct": "Agregar otro producto",
+            "No": "No, gracias… mi mascota se perderá los snacks"
+        },
+        "BuyProduct": {
+            "Title": "Datos de pago",
+            "ConfirmPurchase": "Confirmar compra",
+            "OrderSummary": "Resumen del pedido",
+            "Amount":"Cantidad"
         }
     },
     "Common": {

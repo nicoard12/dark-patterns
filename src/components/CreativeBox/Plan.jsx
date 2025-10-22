@@ -5,28 +5,29 @@ import fondo from "../../assets/CreativeBox/fondoPlan.jpeg";
 import logo3 from "../../assets/CreativeBox/logoAI.jpeg";
 import ProductoBox from "./ProductoBox";
 import CancelPlanModal from "./CancelPlanModal";
+import { useTranslation } from "react-i18next";
 
-//TODO: Cambiar texto por traduccion
 
 function Plan() {
   const [openModal, setOpenModal] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="p-4 flex flex-col gap-2.5">
-      <h1 className="text-3xl font-bold">Mis planes</h1>
+      <h1 className="text-3xl font-bold">{t("CreativeBox.Sidebar.Plans")}</h1>
       <hr />
 
       <div className="flex flex-col sm:flex-row bg-white p-3 gap-10 ">
         <ProductoBox
           nombre="Creativebox Stock+AI"
-          descripcion="Accede a millones de imágenes, videos 4k y HD, plantillas y mucho más sin derechos de autor, todo en el mismo plan."
+          descripcion={t("CreativeBox.Plan.Description")}
           imagen={fondo}
           esPlan={true}
           setOpenModal={setOpenModal}
         />
 
         <div className="flex flex-col gap-5">
-          <h2 className="text-lg font-semibold">Incluido en tu plan</h2>
+          <h2 className="text-lg font-semibold">{t("CreativeBox.Plan.Included")}</h2>
 
           <ul className="flex flex-col gap-3">
             <li className="flex items-center gap-1">
@@ -34,12 +35,10 @@ function Plan() {
               <p>Creativebox Blazewing</p>
             </li>
             <li className="flex items-center gap-1">
-              <img className="w-6 h-6 rounded-sm" src={logo2} alt="" /> Imágenes
-              de Creativebox
+              <img className="w-6 h-6 rounded-sm" src={logo2} alt="" /> {t("CreativeBox.Plan.CreativeboxImages")}
             </li>
             <li className="flex items-center gap-1">
-              <img className="w-6 h-6 rounded-sm" src={logo3} alt="" /> Usos de
-              la AI generativa
+              <img className="w-6 h-6 rounded-sm" src={logo3} alt="" /> {t("CreativeBox.Plan.GenerativeAI")}
             </li>
           </ul>
         </div>
