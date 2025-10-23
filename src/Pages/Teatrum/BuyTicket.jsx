@@ -71,31 +71,40 @@ function BuyTicket() {
     <div>
       <NavBar />
 
-      <div className="flex flex-col sm:flex-row items-start p-5 gap-5">
-        <div className="flex flex-col w-full sm:hidden bg-red-800 gap-14 text-white p-3 px-10 rounded ">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-semibold">{event.title}</h1>
-            <p>{event.date}</p>
-            <p>Teatrum</p>
+      <div className="flex flex-col sm:flex-row p-5 gap-2">
+        <div className="sm:hidden flex flex-col bg-white text-gray-800 rounded-xl shadow-lg border border-gray-200 p-6">
+          {/* Encabezado */}
+          <div className="border-b border-gray-300 pb-3 mb-4">
+            <h1 className="text-2xl font-bold">{event.title}</h1>
+            <p className="text-sm text-gray-500">{event.date}</p>
+            <p className="text-sm font-medium mt-1">Teatrum</p>
           </div>
 
-          <div className="flex flex-col items-center justify-center ">
+          {/* Detalle de entradas */}
+          <div className="bg-gray-50 rounded-lg p-4 text-center mb-4">
             <p className="text-lg font-semibold">
               {selectedAmount} {t("Teatrum.Buy.Tickets")}{" "}
               {t(`Teatrum.Buy.${selectedLocation}`)}
             </p>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <p>
-              {t("Teatrum.Buy.TicketsPrice")} ${total}
-            </p>
-            <p>
-              {t("Teatrum.Buy.ServiceCharge")} ${Math.floor(total * 0.15)}
-            </p>
-            <h1 className="text-3xl font-semibold">
-              Total ${total + Math.floor(total * 0.15)}
-            </h1>
+          {/* Resumen de costos */}
+          <div className="space-y-2 text-sm">
+            <div className="flex justify-between">
+              <span>{t("Teatrum.Buy.TicketsPrice")}</span>
+              <span>${total}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>{t("Teatrum.Buy.ServiceCharge")}</span>
+              <span>${Math.floor(total * 0.15)}</span>
+            </div>
+
+            <div className="border-t border-gray-300 pt-3 mt-3 flex justify-between items-center">
+              <h2 className="text-lg font-bold">Total</h2>
+              <h2 className="text-xl font-bold text-red-700">
+                ${total + Math.floor(total * 0.15)}
+              </h2>
+            </div>
           </div>
         </div>
 
@@ -207,30 +216,39 @@ function BuyTicket() {
           </button>
         </form>
 
-        <div className="hidden sm:flex bg-red-800 flex-col items-start gap-14 text-white p-3 px-14 pl-10 rounded shadow">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-semibold">{event.title}</h1>
-            <p>{event.date}</p>
-            <p>Teatrum</p>
+        <div className="hidden sm:flex flex-col bg-white text-gray-800 rounded-xl shadow-lg border border-gray-200 p-6 w-96 mb-10">
+          {/* Encabezado */}
+          <div className="border-b border-gray-300 pb-3 mb-4">
+            <h1 className="text-2xl font-bold">{event.title}</h1>
+            <p className="text-sm text-gray-500">{event.date}</p>
+            <p className="text-sm font-medium mt-1">Teatrum</p>
           </div>
 
-          <div className="flex flex-col items-center justify-center ">
+          {/* Detalle de entradas */}
+          <div className="bg-gray-50 rounded-lg p-4 text-center mb-4">
             <p className="text-lg font-semibold">
               {selectedAmount} {t("Teatrum.Buy.Tickets")}{" "}
               {t(`Teatrum.Buy.${selectedLocation}`)}
             </p>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <p>
-              {t("Teatrum.Buy.TicketsPrice")} ${total}
-            </p>
-            <p>
-              {t("Teatrum.Buy.ServiceCharge")} ${Math.floor(total * 0.15)}
-            </p>
-            <h1 className="text-3xl font-semibold">
-              Total ${total + Math.floor(total * 0.15)}
-            </h1>
+          {/* Resumen de costos */}
+          <div className="space-y-2 text-sm">
+            <div className="flex justify-between">
+              <span>{t("Teatrum.Buy.TicketsPrice")}</span>
+              <span>${total}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>{t("Teatrum.Buy.ServiceCharge")}</span>
+              <span>${Math.floor(total * 0.15)}</span>
+            </div>
+
+            <div className="border-t border-gray-300 pt-3 mt-3 flex justify-between items-center">
+              <h2 className="text-lg font-bold">Total</h2>
+              <h2 className="text-xl font-bold text-red-700">
+                ${total + Math.floor(total * 0.15)}
+              </h2>
+            </div>
           </div>
         </div>
       </div>
