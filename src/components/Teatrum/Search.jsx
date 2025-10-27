@@ -16,7 +16,7 @@ function Search({ events, setEventsState }) {
 
 
   return (
-    <div className="flex items-center bg-gray-200/70 rounded p-1.5 gap-2 w-full max-w-[700px] min-w-0 shadow ">
+    <div className="flex items-center bg-gray-200/70 rounded p-1.5 gap-2 w-full max-w-[700px] min-w-0 shadow border border-gray-300">
       <i className="fa-solid fa-magnifying-glass text-gray-600 px-2 py-2"></i>
 
       <input

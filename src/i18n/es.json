@@ -360,7 +360,9 @@
             "History": "Historia",
             "Layout": "Plano",
             "Search": "Buscar",
-            "EmptyEvents": "Ningúna obra se titula con ese nombre"
+            "EmptyEvents": "Ningúna obra se titula con ese nombre",
+            "HeroText1": "Viví la magia del teatro.",
+            "HeroText2": "Elegí tu próxima función."
         },
         "Event":{
             "Buy": "Comprar",
@@ -369,39 +371,39 @@
             "Rating": "Puntuación",
             "1": {
                 "Description": "Sumergite en un intenso drama psicológico donde las emociones y los dilemas internos te mantendrán al borde del asiento.",
-                "Comment1": "Me encantó. Compré entradas para halagar a una sobrina y se enferm…",
+                "Comment1": "Me encantó. Recomendadisima.",
                 "Comment2": "La obra fue increíble, las actuaciones me sorprendieron mucho.",
                 "Comment3": "Me gustó muchísimo, cada escena tenía algo inesperado."
             },
             "2": {
-                "Description": "Descubrí una historia cargada de secretos familiares que se revelan poco a poco, envolviéndote en un ambiente de misterio y emoción.",
-                "Comment1": "Una experiencia maravillosa que quiero repetir pronto.",
-                "Comment2": "Los actores transmiten emociones de manera impecable…",
-                "Comment3": "Fantástico, lo disfruté de principio a fin sin distracciones."
+                "Description": "La historia de un peleador que enfrenta su mayor desafío dentro y fuera del ring, con golpes y risas por igual.",
+                "Comment1": "Salí del teatro con una sonrisa y pensando en volver pronto.",
+                "Comment2": "Excelente, logra emocionar sin ser exagerada…",
+                "Comment3": "Increíble historia de superación!!!"
             },
             "3": {
                 "Description": "Viví un viaje teatral único que entrelaza épocas y destinos, invitándote a reflexionar sobre las decisiones que marcan nuestras vidas.",
                 "Comment1": "Compré entradas por curiosidad y terminé fascinado.",
                 "Comment2": "Muy recomendable, el guion y la puesta en escena geniales…",
-                "Comment3": "Me hizo reír y reflexionar al mismo tiempo, ¡bravo!"
-            },
-            "4": {
-                "Description": "Entrá a un espacio íntimo donde el silencio habla y cada gesto cuenta, en una experiencia teatral profunda y cautivadora.",
-                "Comment1": "Todo estuvo cuidado al detalle y la música acompañó perfecto.",
-                "Comment2": "Una obra que supera las expectativas de cualquier espectador…",
                 "Comment3": "Lo mejor que vi en teatro este año, sin dudas."
             },
+            "4": {
+                "Description": "Seis mujeres, una casa y cero sentido común. Crazy ladies es una comedia desbordada donde todo puede salir mal… y efectivamente, sale mal. Pero entre risas, gritos y copas de vino, descubren que la locura compartida puede ser la mejor terapia.",
+                "Comment1": "Jajajaja increíble obra, me reí de principio a fin…",
+                "Comment2": "Muy buena! fui con pocas expectativas y me sorprendió…",
+                "Comment3": "Las seis la rompieron!"
+            },
             "5": {
-                "Description": "Dejate llevar por una obra de suspenso donde cada secreto y mentira te acercan un poco más a una verdad inesperada.",
+                "Description": "Un drama que explora los conflictos, secretos y emociones intensas dentro de una pareja al borde del colapso.",
                 "Comment1": "Me emocioné en varias escenas, los actores son talentosos…",
                 "Comment2": "Vale la pena cada minuto y cada entrada pagada.",
                 "Comment3": "La historia atrapante y la escenografía impecable."
             },
             "6": {
-                "Description": "Presenciá una tragedia intensa, donde pasiones y ambiciones chocan con fuerza en un destino que no da marcha atrás.",
-                "Comment1": "Un espectáculo increíble",
+                "Description": "Cuatro detectives se sumergen en la investigación de un crimen que nadie quiere recordar. Cada uno guarda su propio secreto, y mientras las piezas del caso comienzan a encajar, también lo hace la verdad que los une… y los destruye.",
+                "Comment1": "Un espectáculo único, me mantuvo intrigado todo el tiempo.",
                 "Comment2": "Muy recomendada.",
-                "Comment3": "La actuación principal me dejó sin palabras."
+                "Comment3": "El final me dejó sin palabras."
             },
             "7": {
                 "Description": "Acompañá un relato que une generaciones, mostrando cómo las decisiones del pasado resuenan poderosamente en el presente.",
@@ -410,11 +412,12 @@
                 "Comment3": "De lo mejor de este año."
             },
             "8": {
-                "Description": "Embárcate en una experiencia poética y visual que te llevará por un recorrido emocional tan profundo como inspirador.",
-                "Comment1": "Salí del teatro con una sonrisa y pensando en volver pronto.",
-                "Comment2": "Excelente, logra emocionar sin ser exagerada…",
-                "Comment3": "Disfruté cada detalle y la recomiendo a todo el mundo."
+                "Description": "Una comedia sobre una pareja alocada que no para de meterse en situaciones cómicas y desopilantes.",
+                "Comment1": "Una experiencia maravillosa que quiero repetir pronto.",
+                "Comment2": "Los actores transmiten emociones de manera impecable…",
+                "Comment3": "Fantástico, lo disfruté de principio a fin sin distracciones."
             }
+
         },
         "Buy":{
             "forward": "ADELANTE",
