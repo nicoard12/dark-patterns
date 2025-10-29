@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Plan from "../../components/Moviemax/Plan";
 import { useNavigate } from "react-router-dom";
 import { plans } from "./plans";
 
 function getPlanTitle(id) {
-  return plans.find((p) => p.id == id).title
+  return plans.find((p) => p.id == id).title;
 }
 
 function PlanSelect() {
   const [seeAll, setSeeAllPlans] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(4);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="relative z-10 flex w-full justify-between items-center px-8 py-6">
@@ -46,15 +50,17 @@ function PlanSelect() {
         </div>
 
         <div className="text-gray-600 text-sm flex flex-col gap-2">
-          {!seeAll && <p>
-            Quieres mas opciones?{" "}
-            <span
-              onClick={() => setSeeAllPlans(true)}
-              className="font-medium text-blue-500 cursor-pointer hover:text-blue-600"
-            >
-              Ver todos los planes
-            </span>
-          </p>}
+          {!seeAll && (
+            <p>
+              Quieres mas opciones?{" "}
+              <span
+                onClick={() => setSeeAllPlans(true)}
+                className="font-medium text-blue-500 cursor-pointer hover:text-blue-600"
+              >
+                Ver todos los planes
+              </span>
+            </p>
+          )}
           <p>
             La disponibilidad del contenido en HD (720p), Full HD (1080p), Ultra
             HD (4K) y HDR depende de tu servicio de internet y del dispositivo

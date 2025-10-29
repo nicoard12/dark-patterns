@@ -1,5 +1,5 @@
-import { useState, forwardRef } from "react";
-import { useParams } from "react-router-dom";
+import { useState, forwardRef, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { Footer } from "../../components/Moviemax/Footer";
 import { plans } from "./plans";
 import { useTranslation } from "react-i18next";
@@ -27,6 +27,7 @@ const FieldError = ({ message }) => (
 function Checkout() {
   const { id } = useParams();
   const plan = plans.find((p) => p.title == id);
+  const navigate= useNavigate()
 
   const [showAutocompleteCard, setShowAutocompleteCard] = useState(false);
 
@@ -51,6 +52,10 @@ function Checkout() {
     setValue("x-expiry", "12/28");
     setValue("x-code", "322");
   };
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   return (
     <div className="flex flex-col items-center gap-10">
@@ -170,9 +175,9 @@ function Checkout() {
             </div>
           </div>
 
-          <div>
-            <p>${plan.price} al mes</p>
-            <p>{plan.title}</p>
+          <div className="bg-gray-200 p-3 rounded w-full text-lg">
+            <p className="font-medium">${plan.price} al mes</p>
+            <p className="font-medium text-gray-500">{plan.title}</p>
           </div>
 
           <button
