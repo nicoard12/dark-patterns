@@ -59,7 +59,7 @@ function Event() {
         <div className="flex flex-col gap-8 w-full">
           <div className="flex flex-col gap-10 justify-between items-start w-full">
             <div className="flex flex-col gap-3">
-              <div>
+              <div className="flex flex-col gap-3">
                 <h1 className="font-semibold text-2xl">{event.title}</h1>
                 <p className=" text-1xl">
                   {t(`Teatrum.Event.${event.id}.Description`)}

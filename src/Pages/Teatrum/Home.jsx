@@ -16,13 +16,28 @@ export function Home() {
       <NavBar />
       <div className="flex flex-col items-center gap-10 ">
         <div
-          className="flex justify-between items-center  w-full bg-cover bg-center px-4 py-40"
+          className="relative flex items-center justify-between w-full bg-cover bg-center px-6 py-40"
           style={{ backgroundImage: `url(${Banner})` }}
         >
-          <i className="fa-solid fa-chevron-left text-gray-500 text-2xl cursor-pointer hover:text-white"></i>
-          <Search events={events} setEventsState={setEventsState} />
-          <i className="fa-solid fa-chevron-right text-gray-500 text-2xl cursor-pointer hover:text-white"></i>
+          {/* Flecha izquierda */}
+          <i className="fa-solid fa-chevron-left text-white/70 text-3xl cursor-pointer hover:text-white transition-colors duration-200"></i>
+
+          {/* Texto centrado */}
+
+          <div className="bg-black/50 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg">
+            <p className="text-white text-2xl md:text-3xl font-semibold text-center tracking-wide">
+              {t("Teatrum.Home.HeroText1")}{" "}
+              <span className="text-red-800">
+                {t("Teatrum.Home.HeroText2")}
+              </span>
+            </p>
+          </div>
+
+          {/* Flecha derecha */}
+          <i className="fa-solid fa-chevron-right text-white/70 text-3xl cursor-pointer hover:text-white transition-colors duration-200"></i>
         </div>
+
+        <Search events={events} setEventsState={setEventsState} />
         {eventsState.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             {eventsState.map((event) => (

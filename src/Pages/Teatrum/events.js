@@ -1,11 +1,11 @@
-import One from "../../assets/Teatrum/One.png"
-import Two from "../../assets/Teatrum/Two.png"
-import Three from "../../assets/Teatrum/Three.png"
-import Four from "../../assets/Teatrum/Four.jpeg"
-import Five from "../../assets/Teatrum/Five.png"
-import Six from "../../assets/Teatrum/Six.png"
-import Seven from "../../assets/Teatrum/Seven.png"
-import Eight from "../../assets/Teatrum/Eight.png"
+import One from "../../assets/Teatrum/One.png";
+import Two from "../../assets/Teatrum/Two.png";
+import Three from "../../assets/Teatrum/Three.png";
+import Four from "../../assets/Teatrum/Four.png";
+import Five from "../../assets/Teatrum/Five.png";
+import Six from "../../assets/Teatrum/Six.png";
+import Seven from "../../assets/Teatrum/Seven.png";
+import Eight from "../../assets/Teatrum/Eight.png";
 
 //descripciones distintas a las de la traduccion
 export const events = [
@@ -22,42 +22,42 @@ export const events = [
     comments: [
       {
         name: "Monica",
-        rating: 5
+        rating: 5,
       },
       {
         name: "Nicolas",
-        rating: 5
+        rating: 5,
       },
       {
         name: "Maria",
-        rating: 5
-      }
-    ]
+        rating: 5,
+      },
+    ],
   },
   {
     id: "2",
-    title: "Echoes in the Hall",
-    price: 60,
-    date: "05/11/2025 21:00",
+    title: "Last Round",
+    price: 70,
+    date: "25/11/2025 21:00",
     description:
-      "Una historia de secretos familiares que se desvela lentamente, donde cada personaje guarda un pasado que impacta el presente.",
-    img: Two,
+      "La historia de un peleador que enfrenta su mayor desafío dentro y fuera del ring, con golpes y risas por igual.",
+    img: Eight,
     stars: 5,
-    opinions: 3127,
+    opinions: 1803,
     comments: [
       {
-        name: "Olivia",
-        rating: 5
+        name: "Michael",
+        rating: 5,
       },
       {
-        name: "Jazmin",
-        rating: 5
+        name: "Monica",
+        rating: 5,
       },
       {
-        name: "Bob",
-        rating: 4.5
-      }
-    ]
+        name: "Emily",
+        rating: 5,
+      },
+    ],
   },
   {
     id: "3",
@@ -72,96 +72,96 @@ export const events = [
     comments: [
       {
         name: "Daniel",
-        rating: 4
+        rating: 4,
       },
       {
         name: "Matthew",
-        rating: 5
+        rating: 5,
       },
       {
         name: "Lauren",
-        rating: 4.5
-      }
-    ]
+        rating: 4.5,
+      },
+    ],
   },
   {
     id: "4",
-    title: "The Silent Room",
+    title: "Crazy ladies",
     price: 50,
     date: "12/11/2025 20:00",
     description:
-      "Un drama íntimo en un espacio cerrado, donde los silencios y gestos revelan más que las palabras de los personajes.",
+      "Seis mujeres, una casa y cero sentido común. Crazy ladies es una comedia desbordada donde todo puede salir mal… y efectivamente, sale mal. Pero entre risas, gritos y copas de vino, descubren que la locura compartida puede ser la mejor terapia.",
     img: Four,
     stars: 4,
     opinions: 2130,
     comments: [
       {
         name: "Megan",
-        rating: 4.5
+        rating: 4.5,
       },
       {
         name: "Joshua",
-        rating: 4.5
+        rating: 4.5,
       },
       {
         name: "Amanda",
-        rating: 4.5
-      }
-    ]
+        rating: 4.5,
+      },
+    ],
   },
   {
     id: "5",
-    title: "Veil of Secrets",
+    title: "Fractured",
     price: 65,
     date: "15/11/2025 21:30",
     description:
-      "Una obra de suspenso que explora cómo los secretos y las mentiras afectan la vida de quienes los guardan y los descubren.",
+      "Un drama que explora los conflictos, secretos y emociones intensas dentro de una pareja al borde del colapso.",
     img: Five,
     stars: 5,
     opinions: 1799,
     comments: [
       {
         name: "Kevin",
-        rating: 4
+        rating: 4,
       },
       {
         name: "Ryan",
-        rating: 4.5
+        rating: 4.5,
       },
       {
         name: "Christopher",
-        rating: 4.5
-      }
-    ]
+        rating: 4.5,
+      },
+    ],
   },
   {
     id: "6",
-    title: "Crimson Horizon",
+    title: "The Silent Case",
     price: 55,
     date: "18/11/2025 19:00",
     description:
-      "Una tragedia donde las pasiones humanas y las ambiciones chocan, llevando a los personajes hacia un destino inevitable.",
+      "Cuatro detectives se sumergen en la investigación de un crimen que nadie quiere recordar. Cada uno guarda su propio secreto, y mientras las piezas del caso comienzan a encajar, también lo hace la verdad que los une… y los destruye.",
     img: Six,
     stars: 4.5,
     opinions: 2622,
     comments: [
       {
         name: "Maria",
-        rating: 5
+        rating: 5,
       },
       {
         name: "Andrew",
-        rating: 5
+        rating: 5,
       },
       {
         name: "Emma",
-        rating: 5
-      }
-    ]
+        rating: 5,
+      },
+    ],
   },
   {
     id: "7",
-    title: "Whispers of the Past",
+    title: "Legacy",
     price: 80,
     date: "22/11/2025 20:30",
     description:
@@ -172,41 +172,41 @@ export const events = [
     comments: [
       {
         name: "Ashley",
-        rating: 4
+        rating: 4,
       },
       {
         name: "Jessica",
-        rating: 4
+        rating: 4,
       },
       {
         name: "David",
-        rating: 5
-      }
-    ]
+        rating: 5,
+      },
+    ],
   },
   {
     id: "8",
-    title: "The Emerald Path",
-    price: 70,
-    date: "25/11/2025 21:00",
+    title: "Wild Couple",
+    price: 60,
+    date: "05/11/2025 21:00",
     description:
-      "Una narrativa poética y visual que guía al público por un recorrido emocional y reflexivo a través de la vida de sus protagonistas.",
-    img: Eight,
+      "Una comedia sobre una pareja alocada que no para de meterse en situaciones cómicas y desopilantes.",
+    img: Two,
     stars: 5,
-    opinions: 1803,
+    opinions: 3127,
     comments: [
       {
-        name: "Michael",
-        rating: 5
+        name: "Olivia",
+        rating: 5,
       },
       {
-        name: "Monica",
-        rating: 5
+        name: "Jazmin",
+        rating: 5,
       },
       {
-        name: "Emily",
-        rating: 5
-      }
-    ]
-  }
+        name: "Bob",
+        rating: 4.5,
+      },
+    ],
+  },
 ];
