@@ -11,7 +11,7 @@ const Input = forwardRef(
       id={id}
       ref={ref}
       type={type}
-      className={`w-full rounded block p-2${
+      className={`mt-1 border border-gray-400 w-full rounded block p-2${
         !!errors ? " border-2 border-red-500" : ""
       }`}
       placeholder={placeholder}
@@ -70,7 +70,7 @@ export function BuyProduct() {
             {t("PetSpace.BuyProduct.Title")}
           </h2>
 
-          <div className="bg-gray-100 p-6 rounded-2xl w-full">
+          <div className="shadow border border-gray-300 p-6 rounded-2xl w-full">
             <div className="my-4">
               <label
                 htmlFor="fullName"
@@ -106,7 +106,7 @@ export function BuyProduct() {
             </div>
           </div>
 
-          <div className="bg-gray-100 p-6 rounded-2xl w-full">
+          <div className="shadow border border-gray-300 p-6 rounded-2xl w-full">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="w-full md:w-1/2 relative">
                 <p

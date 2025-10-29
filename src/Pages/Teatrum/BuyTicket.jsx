@@ -11,7 +11,7 @@ const Input = forwardRef(
       id={id}
       ref={ref}
       type={type}
-      className={`w-full rounded block p-2${
+      className={`mt-1 border border-gray-400 w-full rounded block p-2${
         !!errors ? " border-2 border-red-500" : ""
       }`}
       placeholder={placeholder}
@@ -112,7 +112,7 @@ function BuyTicket() {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col flex-1 px-10 sm:px-20 lg:px-40 gap-5 sm:items-center"
         >
-          <div className="bg-neutral-200 p-6 rounded sm:w-full ">
+          <div className="shadow border border-gray-300 p-6 rounded sm:w-full ">
             <div className="">
               <div className="my-4">
                 <label htmlFor="fullName">{t("Roomio.Summary.Name")}</label>
@@ -138,7 +138,7 @@ function BuyTicket() {
               </div>
             </div>
           </div>
-          <div className="bg-neutral-200 p-6 rounded sm:w-full">
+          <div className="shadow border border-gray-300 p-6 rounded sm:w-full">
             <div className="flex my-4">
               <div className="w-1/3 mr-8 relative">
                 <p

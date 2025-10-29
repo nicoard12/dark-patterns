@@ -11,7 +11,7 @@ const Input = forwardRef(
       id={id}
       ref={ref}
       type={type}
-      className={`border border-gray-400 w-full rounded block p-2${
+      className={`mt-1 border border-gray-400 w-full rounded block p-2${
         !!errors ? " border-2 border-red-500" : ""
       }`}
       placeholder={placeholder}
@@ -100,7 +100,7 @@ function Checkout() {
               </div>
             </div>
           </div>
-          <div className="shadow border border-gray-300  p-6 rounded sm:w-full">
+          <div className="shadow border border-gray-300 p-6 rounded sm:w-full">
             <div className="flex my-4">
               <div className="w-1/3 mr-8 relative">
                 <p
