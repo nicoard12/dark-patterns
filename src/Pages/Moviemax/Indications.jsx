@@ -1,0 +1,59 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Footer } from "../../components/Moviemax/Footer";
+
+function Indications() {
+  const navigate = useNavigate();
+  return (
+    <div className="flex flex-col items-center gap-10">
+      <div className="w-full">
+        <div className="relative z-10 flex w-full justify-between items-center px-8 py-6">
+          <h1
+            onClick={() => navigate("/moviemax")}
+            className="text-4xl font-bold text-purple-600 cursor-pointer"
+          >
+            MovieMax
+          </h1>
+
+          <button className="hover:bg-gray-300 px-3 py-1 rounded font-medium">
+            Cerrar sesión
+          </button>
+        </div>
+        <hr />
+      </div>
+
+      <div className="flex flex-col gap-6 p-8 rounded-2xl shadow-lg bg-white max-w-md mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+          Elegí tu plan
+        </h2>
+
+        <ul className="flex flex-col gap-3 font-medium text-lg text-gray-600">
+          <li className="flex items-center gap-3">
+            <span className="text-green-500 text-xl">✔</span>
+            Sin compromisos: cancelá cuando quieras.
+          </li>
+          <li className="flex items-center gap-3">
+            <span className="text-green-500 text-xl">✔</span>
+            Todo Moviemax a un bajo costo.
+          </li>
+          <li className="flex items-center gap-3">
+            <span className="text-green-500 text-xl">✔</span>
+            Disfrutá sin límites en todos tus dispositivos.
+          </li>
+        </ul>
+
+        <button
+          onClick={() => navigate("/moviemax/plan-select")}
+          className="mt-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 
+               text-white font-semibold text-2xl px-10 py-4 rounded-lg shadow-md transition-transform hover:scale-105"
+        >
+          Siguiente
+        </button>
+      </div>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default Indications;
