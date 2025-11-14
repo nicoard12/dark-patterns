@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../../components/Moviemax/Footer";
+import { useTranslation } from "react-i18next";
 
 function Indications() {
   const navigate = useNavigate();
+  const {t} = useTranslation()
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,7 +22,7 @@ function Indications() {
           </h1>
 
           <button className="hover:bg-gray-300 px-3 py-1 rounded font-medium">
-            Iniciar sesión
+            {t("Moviemax.Login")}
           </button>
         </div>
         <hr />
@@ -28,21 +30,21 @@ function Indications() {
 
       <div className="flex flex-col gap-6 p-8 rounded-2xl shadow-lg bg-white max-w-md mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-          Elegí tu plan
+          {t("Moviemax.Indications.ChoosePlan")}
         </h2>
 
         <ul className="flex flex-col gap-3 font-medium text-lg text-gray-600">
           <li className="flex items-center gap-3">
             <span className="text-green-500 text-xl">✔</span>
-            Sin compromisos: cancelá cuando quieras.
+            {t("Moviemax.Indications.Indication1")}
           </li>
           <li className="flex items-center gap-3">
             <span className="text-green-500 text-xl">✔</span>
-            Todo Moviemax a un bajo costo.
+            {t("Moviemax.Indications.Indication2")}
           </li>
           <li className="flex items-center gap-3">
             <span className="text-green-500 text-xl">✔</span>
-            Disfrutá sin límites en todos tus dispositivos.
+            {t("Moviemax.Indications.Indication3")}
           </li>
         </ul>
 
@@ -51,7 +53,7 @@ function Indications() {
           className="mt-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 
                text-white font-semibold text-2xl px-10 py-4 rounded-lg shadow-md transition-transform hover:scale-105"
         >
-          Siguiente
+          {t("Moviemax.Indications.Next")}
         </button>
       </div>
 

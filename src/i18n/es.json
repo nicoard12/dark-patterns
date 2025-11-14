@@ -477,6 +477,52 @@
             "Amount":"Cantidad"
         }
     },
+    "Moviemax":{
+        "Login": "Iniciar sesión",
+        "Home":{
+            "Suscribe": "Suscribete y disfruta de tu pelicula favorita.",
+            "Start": "Comenzar"
+        },
+        "Indications":{
+            "ChoosePlan": "Elige tu plan",
+            "Indication1": "Sin compromisos: cancela cuando quieras.",
+            "Indication2": "Todo Moviemax a un bajo costo.",
+            "Indication3": "Disfruta sin límites en todos tus dispositivos.",
+            "Next": "Siguiente"
+        },
+        "PlanSelect":{
+            "Title": "Selecciona el plan ideal para ti",
+            "GetFreePlan": "Obtener plan gratuito",
+            "Disclaimer": "La disponibilidad del contenido en HD (720p), Full HD (1080p), Ultra HD (4K) y HDR depende de tu servicio de internet y del dispositivo en uso. No todo el contenido está disponible en todas las resoluciones. Consulta nuestros Términos de uso para obtener más información."
+        },
+        "Plan":{
+            "Select": "Seleccionar",
+            "MonthlyPrice": "Precio mensual",
+            "Quality": "Calidad de audio y vídeo",
+            "Resolution": "Resolución",
+            "CompatibleDevices": "Dispositivos compatibles",
+            "DevicesList": "TV, computadora, celular, tablet",
+            "HomeDevices": "Dispositivos del hogar en los que se puede ver Moviemax al mismo tiempo",
+            "DownloadDevices": "Dispositivos de descarga",
+            "1":{
+                "Title": "Gratis",
+                "Quality": "Buena"
+            },
+            "2":{
+                "Title": "Básico",
+                "Quality": "Buena"
+            },
+            "3":{
+                "Title": "Estándar",
+                "Quality": "Excelente"
+            },
+            "4":{
+                "Title": "Premium",
+                "Quality": "Óptima"
+            }
+        },
+        "Finish":"Finalizar"
+    },
     "Common": {
         "Select": "Seleccionar",
         "Start": "Iniciar",

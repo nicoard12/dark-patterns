@@ -3,12 +3,14 @@ import Plan from "../../components/Moviemax/Plan";
 import { useNavigate } from "react-router-dom";
 import { plans } from "./plans";
 import { Footer } from "../../components/Moviemax/Footer";
+import { useTranslation } from "react-i18next";
 
 
 function PlanSelect() {
   const [seeAll, setSeeAllPlans] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(4);
   const navigate = useNavigate();
+  const {t} = useTranslation()
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,14 +26,14 @@ function PlanSelect() {
         </h1>
 
         <button className="hover:bg-gray-300 px-3 py-1 rounded font-medium">
-          Iniciar sesión
+          {t("Moviemax.Login")}
         </button>
       </div>
       <hr />
 
       <div className="flex flex-col items-center gap-6 p-8">
         <h2 className="font-medium text-2xl">
-          Selecciona el plan ideal para ti
+          {t("Moviemax.PlanSelect.Title")}
         </h2>
 
         <div className="flex gap-3 overflow-x-auto max-w-[320px] sm:max-w-[700px] lg:max-w-[1050px]">
@@ -53,15 +55,11 @@ function PlanSelect() {
               onClick={() => setSeeAllPlans(true)}
               className="font-medium text-[17px] text-blue-500 cursor-pointer hover:text-blue-600"
             >
-              Obtener plan gratuito
+              {t("Moviemax.PlanSelect.GetFreePlan")}
             </span>
           )}
           <p>
-            La disponibilidad del contenido en HD (720p), Full HD (1080p), Ultra
-            HD (4K) y HDR depende de tu servicio de internet y del dispositivo
-            en uso. No todo el contenido está disponible en todas las
-            resoluciones. Consulta nuestros Términos de uso para obtener más
-            información.
+            {t("Moviemax.PlanSelect.Disclaimer")}
           </p>
         </div>
       </div>

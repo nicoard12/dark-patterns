@@ -1,9 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 
 function Plan({ selectedPlan, setSelectedPlan, plan }) {
   const navigate= useNavigate()
+  const {t} = useTranslation()
   const select = () => {
     setSelectedPlan(plan.id);
   };
@@ -27,7 +29,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
             : "from-blue-800 to-purple-600"
         }  p-3 rounded-lg text-white font-medium `}
       >
-        <h3 className="text-lg">{plan.title}</h3>
+        <h3 className="text-lg">{t(`Moviemax.Plan.${plan.id}.Title`)}</h3>
         <div className="flex items-center justify-between">
           <p className="text-sm">{plan.subtitle}</p>
           {selectedPlan == plan.id && <i class="fa-solid fa-check-circle"></i>}
@@ -36,35 +38,34 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
 
       <ul className="flex flex-col px-6 gap-3">
         <li>
-          <p className="font-medium text-gray-600 text-sm">Precio mensual</p>
+          <p className="font-medium text-gray-600 text-sm">{t("Moviemax.Plan.MonthlyPrice")}</p>
           <p className="font-medium text-gray-800 text-md">${plan.price}</p>
         </li>
         <hr />
         <li>
           <p className="font-medium text-gray-600 text-sm">
-            Calidad de audio y video
+            {t("Moviemax.Plan.Quality")}
           </p>
-          <p className="font-medium text-gray-800 text-md">{plan.quality}</p>
+          <p className="font-medium text-gray-800 text-md">{t(`Moviemax.Plan.${plan.id}.Quality`)}</p>
         </li>
         <hr />
         <li>
-          <p className="font-medium text-gray-600 text-sm">Resolución</p>
+          <p className="font-medium text-gray-600 text-sm">{t("Moviemax.Plan.Resolution")}</p>
           <p className="font-medium text-gray-800 text-md">{plan.resolution}</p>
         </li>
         <hr />
         <li>
           <p className="font-medium text-gray-600 text-sm">
-            Dispositivos compatibles
+            {t("Moviemax.Plan.CompatibleDevices")}
           </p>
           <p className="font-medium text-gray-800 text-md">
-            TV, computadora, celular, tablet
+            {t("Moviemax.Plan.DevicesList")}
           </p>
         </li>
         <hr />
         <li>
           <p className="font-medium text-gray-600 text-sm">
-            Dispositivos del hogar en los que se puede ver Moviemax al mismo
-            tiempo
+            {t("Moviemax.Plan.HomeDevices")}
           </p>
           <p className="font-medium text-gray-800 text-md">
             {plan.home_devices}
@@ -73,7 +74,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
         <hr />
         <li>
           <p className="font-medium text-gray-600 text-sm">
-            Dispositivos de descarga
+            {t("Moviemax.Plan.DownloadDevices")}
           </p>
           <p className="font-medium text-gray-800 text-md">
             {plan.download_devices}
@@ -87,7 +88,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
                 className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 
                          text-white font-semibold text-2xl px-8 py-3 rounded-lg shadow-md"
               >
-                Seleccionar
+                {t("Moviemax.Plan.Select")}
               </button>
             </li>
           </>

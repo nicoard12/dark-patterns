@@ -69,7 +69,7 @@ function Checkout() {
           </h1>
 
           <button className="hover:bg-gray-300 px-3 py-1 rounded font-medium">
-            Iniciar sesión
+            {t(`Moviemax.Login`)}
           </button>
         </div>
         <hr />
@@ -176,15 +176,15 @@ function Checkout() {
           </div>
 
           <div className="bg-gray-200 p-3 rounded w-full text-lg">
-            <p className="font-medium">${plan.price} al mes</p>
-            <p className="font-medium text-gray-500">{plan.title}</p>
+            <p className="font-medium">${plan.price}</p>
+            <p className="font-medium text-gray-500">{t(`Moviemax.Plan.${plan.id}.Title`)}</p>
           </div>
 
           <button
             type="submit"
             className="bg-purple-800 hover:bg-purple-900 text-white p-1.5 px-4 rounded font-semibold text-lg"
           >
-            Iniciar membresía
+            {t(`Moviemax.Finish`)}
           </button>
         </form>
 
