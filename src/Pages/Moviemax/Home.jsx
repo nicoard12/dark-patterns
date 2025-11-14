@@ -21,7 +21,7 @@ export function Home() {
         <h1 className="text-4xl font-bold text-purple-600 cursor-pointer">MovieMax</h1>
 
         <button className="bg-purple-600 hover:bg-purple-700 px-3 py-1 rounded font-medium">
-          Cerrar sesión
+          Iniciar sesión
         </button>
       </div>
 

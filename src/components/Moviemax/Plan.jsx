@@ -1,9 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function Plan({ selectedPlan, setSelectedPlan, plan }) {
+  const navigate= useNavigate()
   const select = () => {
     setSelectedPlan(plan.id);
   };
+
+  const goToCheckout= () =>{
+    if (plan.title == "Gratis") return
+    navigate(`/moviemax/checkout/${plan.title}`)
+  }
+
   return (
     <div
       onClick={select}
@@ -32,7 +41,9 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
         </li>
         <hr />
         <li>
-          <p className="font-medium text-gray-600 text-sm">Calidad de audio y video</p>
+          <p className="font-medium text-gray-600 text-sm">
+            Calidad de audio y video
+          </p>
           <p className="font-medium text-gray-800 text-md">{plan.quality}</p>
         </li>
         <hr />
@@ -42,8 +53,12 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
         </li>
         <hr />
         <li>
-          <p className="font-medium text-gray-600 text-sm">Dispositivos compatibles</p>
-          <p className="font-medium text-gray-800 text-md">TV, computadora, celular, tablet</p>
+          <p className="font-medium text-gray-600 text-sm">
+            Dispositivos compatibles
+          </p>
+          <p className="font-medium text-gray-800 text-md">
+            TV, computadora, celular, tablet
+          </p>
         </li>
         <hr />
         <li>
@@ -51,13 +66,32 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
             Dispositivos del hogar en los que se puede ver Moviemax al mismo
             tiempo
           </p>
-          <p className="font-medium text-gray-800 text-md">{plan.home_devices}</p>
+          <p className="font-medium text-gray-800 text-md">
+            {plan.home_devices}
+          </p>
         </li>
         <hr />
         <li>
-          <p className="font-medium text-gray-600 text-sm">Dispositivos de descarga</p>
-          <p className="font-medium text-gray-800 text-md">{plan.download_devices}</p>
+          <p className="font-medium text-gray-600 text-sm">
+            Dispositivos de descarga
+          </p>
+          <p className="font-medium text-gray-800 text-md">
+            {plan.download_devices}
+          </p>
         </li>
+        {selectedPlan == plan.id && (
+          <>
+            <hr />
+            <li className="flex justify-center items-center">
+              <button onClick={goToCheckout}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 
+                         text-white font-semibold text-2xl px-8 py-3 rounded-lg shadow-md"
+              >
+                Seleccionar
+              </button>
+            </li>
+          </>
+        )}
       </ul>
     </div>
   );

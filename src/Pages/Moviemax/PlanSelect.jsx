@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import Plan from "../../components/Moviemax/Plan";
 import { useNavigate } from "react-router-dom";
 import { plans } from "./plans";
+import { Footer } from "../../components/Moviemax/Footer";
 
-function getPlanTitle(id) {
-  return plans.find((p) => p.id == id).title;
-}
 
 function PlanSelect() {
   const [seeAll, setSeeAllPlans] = useState(false);
@@ -26,7 +24,7 @@ function PlanSelect() {
         </h1>
 
         <button className="hover:bg-gray-300 px-3 py-1 rounded font-medium">
-          Cerrar sesión
+          Iniciar sesión
         </button>
       </div>
       <hr />
@@ -36,9 +34,9 @@ function PlanSelect() {
           Selecciona el plan ideal para ti
         </h2>
 
-        <div className="flex gap-3 overflow-x-auto max-w-[350px] sm:max-w-[1000px]">
+        <div className="flex gap-3 overflow-x-auto max-w-[320px] sm:max-w-[700px] lg:max-w-[1050px]">
           {plans
-            .filter((plan) => seeAll || plan.id !== 2)
+            .filter((plan) => seeAll || plan.id !== 1)
             .map((plan) => (
               <Plan
                 key={plan.id}
@@ -49,17 +47,14 @@ function PlanSelect() {
             ))}
         </div>
 
-        <div className="text-gray-600 text-sm flex flex-col gap-2">
+        <div className="text-gray-600 text-sm flex flex-col items-end gap-2">
           {!seeAll && (
-            <p>
-              Quieres mas opciones?{" "}
-              <span
-                onClick={() => setSeeAllPlans(true)}
-                className="font-medium text-blue-500 cursor-pointer hover:text-blue-600"
-              >
-                Ver todos los planes
-              </span>
-            </p>
+            <span
+              onClick={() => setSeeAllPlans(true)}
+              className="font-medium text-[17px] text-blue-500 cursor-pointer hover:text-blue-600"
+            >
+              Obtener plan gratuito
+            </span>
           )}
           <p>
             La disponibilidad del contenido en HD (720p), Full HD (1080p), Ultra
@@ -69,17 +64,8 @@ function PlanSelect() {
             información.
           </p>
         </div>
-
-        <button
-          onClick={() =>
-            navigate(`/moviemax/checkout/${getPlanTitle(selectedPlan)}`)
-          }
-          className="mb-10 mt-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 
-               text-white font-semibold text-2xl px-10 py-4 rounded-lg shadow-md transition-transform hover:scale-105"
-        >
-          Siguiente
-        </button>
       </div>
+      <Footer />
     </div>
   );
 }

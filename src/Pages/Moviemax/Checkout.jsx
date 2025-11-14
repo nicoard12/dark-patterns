@@ -69,7 +69,7 @@ function Checkout() {
           </h1>
 
           <button className="hover:bg-gray-300 px-3 py-1 rounded font-medium">
-            Cerrar sesión
+            Iniciar sesión
           </button>
         </div>
         <hr />
