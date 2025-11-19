@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../../components/Teatrum/NavBar";
 import EventBox from "../../components/Teatrum/EventBox";
 import { events } from "./events";
@@ -6,11 +6,17 @@ import Search from "../../components/Teatrum/Search";
 import { Footer } from "../../components/Teatrum/Footer";
 import { useTranslation } from "react-i18next";
 import Banner from "../../assets/Teatrum/Banner.png";
+import { updateDarkPatternState } from "../../utils/dark_patterns";
 
 export function Home() {
   const [eventsState, setEventsState] = useState(events);
 
   const { t } = useTranslation();
+
+    useEffect(() => {
+      updateDarkPatternState();
+    }, []);
+
   return (
     <div>
       <NavBar />

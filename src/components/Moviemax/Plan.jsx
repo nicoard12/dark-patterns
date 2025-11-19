@@ -32,7 +32,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
         <h3 className="text-lg">{t(`Moviemax.Plan.${plan.id}.Title`)}</h3>
         <div className="flex items-center justify-between">
           <p className="text-sm">{plan.subtitle}</p>
-          {selectedPlan == plan.id && <i class="fa-solid fa-check-circle"></i>}
+          {selectedPlan == plan.id && <i className="fa-solid fa-check-circle"></i>}
         </div>
       </div>
 

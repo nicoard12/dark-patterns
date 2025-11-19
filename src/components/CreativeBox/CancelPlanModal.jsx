@@ -8,14 +8,20 @@ const CancelPlanModal = ({ onClose }) => {
   const [hasSelection, setHasSelection] = useState(false);
   const [step, setStep] = useState(1);
   const { t } = useTranslation();
+  const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
 
   const nextStep = () => {
     if (step === 1 && !hasSelection) return;
-    setStep(step + 1);
+    if (!darkEnabled) {
+      if (step == 1) setStep(3)
+      else setStep(4)
+    }
+    else setStep(step + 1);
   };
 
   const previousStep = () => {
-    setStep(step - 1);
+    if (!darkEnabled) setStep(1)
+    else setStep(step - 1);
   };
 
   useEffect(() => {

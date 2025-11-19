@@ -12,13 +12,15 @@ export function Product() {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
 
   if (!product) return <div>{t("PetSpace.Product.NotFound")}</div>;
 
   const totalPrice = product.priceKg * product.amountKg;
 
   const handleBuyNow = () => {
-    setShowModal(true);
+    if (darkEnabled) setShowModal(true);
+    else goToCheckout()
   };
 
   const goToCheckout = () => {

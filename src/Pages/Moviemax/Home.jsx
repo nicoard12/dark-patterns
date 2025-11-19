@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BackgroundHome from "../../assets/Moviemax/BackgroundHome.png";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { updateDarkPatternState } from "../../utils/dark_patterns";
 
 export function Home() {
   const navigate = useNavigate();
@@ -10,6 +11,11 @@ export function Home() {
   const goToIndications = () => {
     navigate("/moviemax/indications");
   };
+
+    useEffect(() => {
+      updateDarkPatternState();
+    }, []);
+
   return (
     <div
       className="relative w-full h-screen flex flex-col items-center bg-cover bg-center text-white overflow-auto"

@@ -11,10 +11,14 @@ function PlanSelect() {
   const [selectedPlan, setSelectedPlan] = useState(4);
   const navigate = useNavigate();
   const {t} = useTranslation()
+  const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    setSeeAllPlans(!darkEnabled)
   }, []);
+
   return (
     <div>
       <div className="relative z-10 flex w-full justify-between items-center px-8 py-6">

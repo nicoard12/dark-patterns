@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/Petspace/Navbar";
 import ProductCard from "../../components/Petspace/ProductCard";
 import { Footer } from "../../components/Petspace/Footer";
@@ -9,6 +9,7 @@ import FurFeast from "../../assets/PetSpace/FurFeast.png";
 import portada from "../../assets/PetSpace/portada.png";
 import portada2 from "../../assets/PetSpace/portada2.webp";
 import { useTranslation } from "react-i18next";
+import { updateDarkPatternState } from "../../utils/dark_patterns";
 
 export const products = [
   {
@@ -52,6 +53,11 @@ export const products = [
 
 export function Home() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    updateDarkPatternState();
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
       <Navbar />
@@ -77,7 +83,9 @@ export function Home() {
 
       {/* Featured Products */}
       <section className="px-10 py-14">
-        <h3 className="text-2xl font-semibold mb-8">{t("PetSpace.Home.FeaturedProducts")}</h3>
+        <h3 className="text-2xl font-semibold mb-8">
+          {t("PetSpace.Home.FeaturedProducts")}
+        </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((p) => {
             return <ProductCard key={p.id} product={p} />;

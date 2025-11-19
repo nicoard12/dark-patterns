@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../../components/CreativeBox/NavBar";
 import imagenFondo from "../../assets/CreativeBox/FondoPaisaje.jpg";
 import Buscador from "../../components/CreativeBox/Buscador";
@@ -12,10 +12,15 @@ import logo3 from "../../assets/CreativeBox/logo3.jpeg";
 import fondo4 from "../../assets/CreativeBox/fondo4.jpeg";
 import { Footer } from "../../components/CreativeBox/Footer";
 import { useTranslation } from "react-i18next";
+import { updateDarkPatternState } from "../../utils/dark_patterns";
 
 
 export function Home() {
   const { t } = useTranslation();
+
+    useEffect(() => {
+      updateDarkPatternState();
+    }, []);
 
   return (
     <div className="flex flex-col justify-between items-center gap-5 w-full bg-gray-100 h-screen overflow-y-auto">
