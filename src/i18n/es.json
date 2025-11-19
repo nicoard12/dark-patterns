@@ -424,6 +424,7 @@
             "middle": "MEDIO",
             "back": "ATRÁS",
             "ServiceCharge": "Cargo por servicio:",
+            "WithoutCharges": "Precio sin cargos incluidos:",
             "SelectLocation": "Selecciona Ubicación",
             "SelectTickets": "Selecciona cantidad de entradas",
             "BuyNow": "Comprar ahora",

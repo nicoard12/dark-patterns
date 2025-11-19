@@ -424,6 +424,7 @@
       "middle": "MIDDLE",
       "back": "BACK",
       "ServiceCharge": "Service fee:",
+      "WithoutCharges": "Price without charges included:",
       "SelectLocation": "Select location",
       "SelectTickets": "Select number of tickets",
       "BuyNow": "Buy now",

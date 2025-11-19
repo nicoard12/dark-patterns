@@ -24,6 +24,7 @@ function SelectPrice() {
   const [total, setTotal] = useState(getPriceForward(event.price));
   const [selectedAmount, setSelectedAmount] = useState("1");
   const navigate = useNavigate();
+  const darkEnabled = localStorage.getItem("dark") == "true" ?? false;
 
   const { t } = useTranslation();
 
@@ -111,7 +112,10 @@ function SelectPrice() {
               </select>
               <div className="flex flex-col gap-2 w-full">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-2xl font-semibold">Total: ${total}</h2>
+                  <h2 className="text-2xl font-semibold">
+                    Total: $
+                    {darkEnabled ? total : total + Math.floor(total * 0.15)}{" "}
+                  </h2>
                   <button
                     onClick={goToBuy}
                     className="bg-black hover:bg-black/90 text-white p-1.5 px-4 rounded font-semibold text-lg"
@@ -120,9 +124,15 @@ function SelectPrice() {
                   </button>
                 </div>
 
-                <p className="text-gray-600">
-                  {t("Teatrum.Buy.ServiceCharge")} ${Math.floor(total * 0.15)}
-                </p>
+                {darkEnabled ? (
+                  <p className="text-gray-600">
+                    {t("Teatrum.Buy.ServiceCharge")} ${Math.floor(total * 0.15)}
+                  </p>
+                ) : (
+                  <p className="text-gray-800">
+                    {t("Teatrum.Buy.WithoutCharges")} ${total}
+                  </p>
+                )}
               </div>
             </div>
           </div>
