@@ -6,7 +6,6 @@ import CrunchyBites from "../../assets/PetSpace/CrunchyBites.png";
 import HappyPaws from "../../assets/PetSpace/HappyPaws.png";
 import Tailtreats from "../../assets/PetSpace/Tailtreats.png";
 import FurFeast from "../../assets/PetSpace/FurFeast.png";
-import portada from "../../assets/PetSpace/portada.png";
 import portada2 from "../../assets/PetSpace/portada2.webp";
 import { useTranslation } from "react-i18next";
 import { updateDarkPatternState } from "../../utils/dark_patterns";
@@ -16,7 +15,7 @@ export const products = [
     id: 1,
     name: "CrunchyBites",
     image: CrunchyBites,
-    priceKg: 4,
+    priceKg: 3,
     amountKg: 2,
     description:
       "Croquetas crujientes y nutritivas, ideales para perros adultos de todas las razas. Contienen vitaminas y minerales esenciales para mantenerlos activos y saludables.",
@@ -25,7 +24,7 @@ export const products = [
     id: 2,
     name: "HappyPaws",
     image: HappyPaws,
-    priceKg: 3,
+    priceKg: 2,
     amountKg: 5,
     halfStar: true,
     description:
@@ -35,7 +34,7 @@ export const products = [
     id: 3,
     name: "TailTreats",
     image: Tailtreats,
-    priceKg: 4,
+    priceKg: 2,
     amountKg: 10,
     description:
       "Snacks y croquetas especiales para perros con energía alta. Sabor irresistible y textura crujiente que hará que muevan la cola de alegría.",
@@ -44,7 +43,7 @@ export const products = [
     id: 4,
     name: "FurFeast",
     image: FurFeast,
-    priceKg: 6,
+    priceKg: 5,
     amountKg: 5,
     description:
       "Alimento premium gourmet para mascotas exigentes. Con ingredientes de alta calidad que promueven un pelaje brillante y una salud óptima.",
