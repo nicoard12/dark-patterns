@@ -6,11 +6,18 @@ import logo3 from "../../assets/CreativeBox/logoAI.jpeg";
 import ProductoBox from "./ProductoBox";
 import CancelPlanModal from "./CancelPlanModal";
 import { useTranslation } from "react-i18next";
+import { FinishedTask } from "../FinishedTask";
 
 
 function Plan() {
   const [openModal, setOpenModal] = useState(false);
   const { t } = useTranslation();
+    const [showFinished, setShowFinished]= useState(false)
+
+  const onClose= () =>{
+    setOpenModal(false)
+    setShowFinished(true)
+  }
 
   return (
     <div className="p-4 flex flex-col gap-2.5">
@@ -44,7 +51,8 @@ function Plan() {
         </div>
       </div>
 
-      {openModal && <CancelPlanModal onClose={() => setOpenModal(false)} />}
+      {openModal && <CancelPlanModal onClose={onClose} />}
+      <FinishedTask show={showFinished} />
     </div>
   );
 }

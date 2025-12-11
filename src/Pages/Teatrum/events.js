@@ -136,11 +136,11 @@ export const events = [
   },
   {
     id: "6",
-    title: "The Silent Case",
+    title: "Reflection",
     price: 55,
     date: "18/11/2025 19:00",
     description:
-      "Cuatro detectives se sumergen en la investigación de un crimen que nadie quiere recordar. Cada uno guarda su propio secreto, y mientras las piezas del caso comienzan a encajar, también lo hace la verdad que los une… y los destruye.",
+      "Una mujer descubre que su reflejo empieza a moverse antes que ella. Ese pequeño desfasaje, casi imperceptible al principio, se convierte en un diálogo incómodo con una versión suya que parece saber demasiado.",
     img: Six,
     stars: 4.5,
     opinions: 2622,
