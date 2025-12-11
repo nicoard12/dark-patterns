@@ -4,6 +4,7 @@ import NavBar from "../../components/Teatrum/NavBar";
 import { Footer } from "../../components/Teatrum/Footer";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { FinishedTask } from "../../components/FinishedTask";
 
 const Input = forwardRef(
   ({ id, type = "text", placeholder, errors, ...props }, ref) => (
@@ -254,6 +255,7 @@ function BuyTicket() {
       </div>
 
       <Footer />
+      <FinishedTask show={confirmed} />
     </div>
   );
 }

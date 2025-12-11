@@ -4,6 +4,7 @@ import { Footer } from "../../components/Moviemax/Footer";
 import { plans } from "./plans";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
+import { FinishedTask } from "../../components/FinishedTask";
 
 const Input = forwardRef(
   ({ id, type = "text", placeholder, errors, ...props }, ref) => (
@@ -30,6 +31,7 @@ function Checkout() {
   const navigate= useNavigate()
 
   const [showAutocompleteCard, setShowAutocompleteCard] = useState(false);
+  const [confirmed, setConfirmed]= useState(false)
 
   const { t } = useTranslation();
 
@@ -189,6 +191,7 @@ function Checkout() {
         </form>
 
       <Footer />
+      <FinishedTask show={confirmed} />
     </div>
   );
 }

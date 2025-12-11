@@ -4,6 +4,7 @@ import { products } from "./Home";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import Navbar from "../../components/Petspace/Navbar";
+import { FinishedTask } from "../../components/FinishedTask";
 
 const Input = forwardRef(
   ({ id, type = "text", placeholder, errors, ...props }, ref) => (
@@ -224,6 +225,7 @@ export function BuyProduct() {
           </div>
         </div>
       </div>
+      <FinishedTask show={confirmed} />
     </div>
   );
 }

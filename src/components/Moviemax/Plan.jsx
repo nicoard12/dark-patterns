@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { FinishedTask } from "../FinishedTask";
 
 
 function Plan({ selectedPlan, setSelectedPlan, plan }) {
   const navigate= useNavigate()
+  const [showFinished, setShowFinished]= useState(false)
   const {t} = useTranslation()
   const select = () => {
     setSelectedPlan(plan.id);
   };
 
   const goToCheckout= () =>{
-    if (plan.title == "Gratis") return
-    navigate(`/moviemax/checkout/${plan.title}`)
+    if (plan.title == "Gratis") setShowFinished(true)
+    else navigate(`/moviemax/checkout/${plan.title}`)
   }
 
   return (
@@ -94,6 +96,8 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
           </>
         )}
       </ul>
+
+      <FinishedTask show={showFinished} />
     </div>
   );
 }
