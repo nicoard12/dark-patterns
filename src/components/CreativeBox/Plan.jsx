@@ -14,9 +14,10 @@ function Plan() {
   const { t } = useTranslation();
     const [showFinished, setShowFinished]= useState(false)
 
-  const onClose= () =>{
+  const onClose= (finishT = false) =>{
     setOpenModal(false)
-    setShowFinished(true)
+    console.log("asd", finishT)
+    if (finishT) setShowFinished(true)
   }
 
   return (

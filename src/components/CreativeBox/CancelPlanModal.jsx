@@ -26,7 +26,7 @@ const CancelPlanModal = ({ onClose }) => {
 
   useEffect(() => {
     if (step === 1) setHasSelection(false);
-    else if (step === 4) onClose();
+    else if (step === 4) onClose(true);
   }, [step]);
 
   return (
@@ -34,7 +34,7 @@ const CancelPlanModal = ({ onClose }) => {
       {/* Overlay */}
       <div
         className="absolute inset-0 bg-black bg-opacity-50"
-        onClick={onClose}
+        onClick={() => onClose()}
       ></div>
 
       <div className="relative bg-white rounded-xl shadow-lg  p-6 z-10 overflow-y-auto h-[80vh] sm:h-auto">
@@ -45,7 +45,7 @@ const CancelPlanModal = ({ onClose }) => {
         <div className="mt-6 flex flex-col sm:flex-row justify-between items-start gap-1 text-xs">
           <button
             className="px-4 py-2 rounded-full border-2 border-black text-gray-700 hover:bg-gray-100"
-            onClick={onClose}
+            onClick={() => onClose()}
           >
             {t("CreativeBox.Modal.KeepPlan")}
           </button>
