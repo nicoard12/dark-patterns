@@ -62,7 +62,7 @@ export function Home() {
       <Navbar />
 
       <section
-        className="relative flex flex-col items-center justify-center text-center px-10 py-20 shadow-sm bg-cover bg-center bg-no-repeat"
+        className="relative flex flex-col items-center justify-center text-center px-10 py-28 shadow-sm bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${portada2})` }}
       >
         <div className="absolute inset-0 bg-blue-900 bg-opacity-40"></div>
@@ -74,9 +74,6 @@ export function Home() {
           <p className="text-lg drop-shadow-sm">
             {t("PetSpace.Home.Subtitle")}
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-xl transition-colors shadow-md">
-            {t("PetSpace.Home.SeeProducts")}
-          </button>
         </div>
       </section>
 

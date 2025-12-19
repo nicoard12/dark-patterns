@@ -22,7 +22,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
       onClick={select}
       className={`${
         selectedPlan == plan.id && "border-purple-400 bg-gray-200"
-      } flex flex-col p-2 pb-6 border border-gray-300 rounded-lg shadow hover:shadow-md cursor-pointer gap-6`}
+      } flex flex-col p-2 border border-gray-300 rounded-lg shadow hover:shadow-md cursor-pointer gap-2`}
     >
       <div
         className={`bg-gradient-to-r ${
@@ -38,7 +38,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
         </div>
       </div>
 
-      <ul className="flex flex-col px-6 gap-3">
+      <ul className="flex flex-col px-6 gap-2">
         <li>
           <p className="font-medium text-gray-600 text-sm">{t("Moviemax.Plan.MonthlyPrice")}</p>
           <p className="font-medium text-gray-800 text-md">${plan.price}</p>
@@ -88,7 +88,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
             <li className="flex justify-center items-center">
               <button onClick={goToCheckout}
                 className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 
-                         text-white font-semibold text-2xl px-8 py-3 rounded-lg shadow-md"
+                         text-white font-semibold text-lg px-8 py-2 rounded-lg shadow-md"
               >
                 {t("Moviemax.Plan.Select")}
               </button>
