@@ -1,7 +1,7 @@
 import React from "react";
 import ProductoBox from "../ProductoBox";
 import fondo1 from "../../../assets/CreativeBox/fondoPixelForge.jpeg";
-import fondo2 from "../../../assets/CreativeBox/fondoFrameflow.jpeg";
+import fondo2 from "../../../assets/CreativeBox/fondoFrameFlow.jpeg";
 import fondo3 from "../../../assets/CreativeBox/fondo1.jpeg";
 import { useTranslation } from "react-i18next";
 

@@ -35,7 +35,7 @@ function PlanSelect() {
       </div>
       <hr />
 
-      <div className="flex flex-col items-center gap-6 p-8">
+      <div className="flex flex-col items-center gap-3 p-8">
         <h2 className="font-medium text-2xl">
           {t("Moviemax.PlanSelect.Title")}
         </h2>
